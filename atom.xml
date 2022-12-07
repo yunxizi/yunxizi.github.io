@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>云昔子</title>
+  
+  <subtitle>个人笔记</subtitle>
+  <link href="https://yunxizi.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://yunxizi.github.io/"/>
+  <updated>2022-12-07T00:57:43.124Z</updated>
+  <id>https://yunxizi.github.io/</id>
+  
+  <author>
+    <name>Yunxizi</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>re</title>
+    <link href="https://yunxizi.github.io/2022/12/07/re/"/>
+    <id>https://yunxizi.github.io/2022/12/07/re/</id>
+    <published>2022-12-07T00:56:23.000Z</published>
+    <updated>2022-12-07T00:57:43.124Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;re模块&quot;&gt;&lt;a href=&quot;#re模块&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>javascript</title>
+    <link href="https://yunxizi.github.io/2022/10/12/javascript/"/>
+    <id>https://yunxizi.github.io/2022/10/12/javascript/</id>
+    <published>2022-10-12T00:14:47.000Z</published>
+    <updated>2022-10-12T00:14:47.413Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://yunxizi.github.io/2022/10/05/untitled/"/>
+    <id>https://yunxizi.github.io/2022/10/05/untitled/</id>
+    <published>2022-10-05T13:53:34.155Z</published>
+    <updated>2022-10-05T13:53:40.490Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;#include&amp;lt;stdio.h&amp;gt;&lt;br&gt;#define Maxsize 100//定义maxsize等于100,同时作为顺序表的最大长度,注意define后面不用加’;’&lt;br&gt;typedef int</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MATLAB</title>
+    <link href="https://yunxizi.github.io/2022/10/04/matlab/"/>
+    <id>https://yunxizi.github.io/2022/10/04/matlab/</id>
+    <published>2022-10-04T13:10:38.000Z</published>
+    <updated>2022-10-04T13:39:07.195Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;MATLAB&quot;&gt;&lt;a href=&quot;#MATLAB&quot; class=&quot;headerlink&quot; title=&quot;MATLAB&quot;&gt;&lt;/a&gt;MATLAB&lt;/h1&gt;&lt;blockquote&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>html5</title>
+    <link href="https://yunxizi.github.io/2022/10/02/html5/"/>
+    <id>https://yunxizi.github.io/2022/10/02/html5/</id>
+    <published>2022-10-02T08:01:04.000Z</published>
+    <updated>2022-10-02T08:01:57.603Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTML5&quot;&gt;&lt;a href=&quot;#HTML5&quot; class=&quot;headerlink&quot; title=&quot;HTML5&quot;&gt;&lt;/a&gt;HTML5&lt;/h1&gt;&lt;img src=&quot;E:\markdown\新建文件夹\image-20220421114031717.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>html</title>
+    <link href="https://yunxizi.github.io/2022/09/30/html/"/>
+    <id>https://yunxizi.github.io/2022/09/30/html/</id>
+    <published>2022-09-30T04:55:50.000Z</published>
+    <updated>2022-09-30T04:56:24.047Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTML&quot;&gt;&lt;a href=&quot;#HTML&quot; class=&quot;headerlink&quot; title=&quot;HTML&quot;&gt;&lt;/a&gt;HTML&lt;/h1&gt;&lt;p&gt;英文单词：&lt;strong&gt;center&lt;/strong&gt; 中间&lt;/p&gt;
+&lt;p&gt;​                  </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python函数总结</title>
+    <link href="https://yunxizi.github.io/2022/09/14/python-han-shu-zong-jie/"/>
+    <id>https://yunxizi.github.io/2022/09/14/python-han-shu-zong-jie/</id>
+    <published>2022-09-14T11:03:54.000Z</published>
+    <updated>2022-09-15T03:57:34.124Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python进阶笔记</title>
+    <link href="https://yunxizi.github.io/2022/09/13/python-jin-jie-bi-ji/"/>
+    <id>https://yunxizi.github.io/2022/09/13/python-jin-jie-bi-ji/</id>
+    <published>2022-09-13T09:14:35.000Z</published>
+    <updated>2022-09-24T01:45:20.853Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;python进阶笔记&quot;&gt;&lt;a href=&quot;#python进阶笔记&quot; class=&quot;headerlink&quot; title=&quot;python进阶笔记&quot;&gt;&lt;/a&gt;python进阶笔记&lt;/h1&gt;&lt;h1 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java基础</title>
+    <link href="https://yunxizi.github.io/2022/09/12/java-ji-chu/"/>
+    <id>https://yunxizi.github.io/2022/09/12/java-ji-chu/</id>
+    <published>2022-09-12T08:39:45.000Z</published>
+    <updated>2022-09-16T05:45:13.532Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;java基础学习笔记&quot;&gt;&lt;a href=&quot;#java基础学习笔记&quot; class=&quot;headerlink&quot; title=&quot;java基础学习笔记&quot;&gt;&lt;/a&gt;java基础学习笔记&lt;/h1&gt;&lt;p&gt;$$&lt;br&gt;‘’欲练此功,拔刀自宫[狗头]’’&lt;br&gt;$$&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>01-Python-基础</title>
+    <link href="https://yunxizi.github.io/2022/09/12/01-python-ji-chu/"/>
+    <id>https://yunxizi.github.io/2022/09/12/01-python-ji-chu/</id>
+    <published>2022-09-12T07:03:16.000Z</published>
+    <updated>2022-09-15T03:57:26.097Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&quot;python的断行&quot;&gt;&lt;a href=&quot;#python的断行&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python基础</title>
+    <link href="https://yunxizi.github.io/2022/09/12/python-shu-ju-ji-chu/"/>
+    <id>https://yunxizi.github.io/2022/09/12/python-shu-ju-ji-chu/</id>
+    <published>2022-09-12T05:02:19.000Z</published>
+    <updated>2022-09-15T03:57:30.110Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h1 id=&quot;python&quot;&gt;&lt;a href=&quot;#python&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
