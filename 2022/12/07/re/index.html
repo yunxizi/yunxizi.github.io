@@ -740,6 +740,166 @@ m <span class="token operator">=</span> re<span class="token punctuation">.</spa
 	s<span class="token operator">=</span>s<span class="token punctuation">[</span>end<span class="token punctuation">:</span><span class="token punctuation">]</span>
 	m <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span>reg<span class="token punctuation">,</span>s<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="常见匹配模式"><a href="#常见匹配模式" class="headerlink" title="常见匹配模式"></a>常见匹配模式</h2><table>
+<thead>
+<tr>
+<th>模式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\w</td>
+<td>匹配字母数字及下划线</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>匹配非字母数字下划线</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任意空白字符，等价于 [\t\n\r\f].</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配任意非空字符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配任意数字，等价于 [0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>匹配任意非数字</td>
+</tr>
+<tr>
+<td>\A</td>
+<td>匹配字符串开始</td>
+</tr>
+<tr>
+<td>\Z</td>
+<td>匹配字符串结束，如果是存在换行，只匹配到换行前的结束字符串</td>
+</tr>
+<tr>
+<td>\z</td>
+<td>匹配字符串结束</td>
+</tr>
+<tr>
+<td>\G</td>
+<td>匹配最后匹配完成的位置</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>匹配一个换行符</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>匹配一个制表符</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配字符串的开头</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串的末尾。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配任意字符，除了换行符，当re.DOTALL标记被指定时，则可以匹配包括换行符的任意字符。</td>
+</tr>
+<tr>
+<td>[…]</td>
+<td>用来表示一组字符,单独列出：[amk] 匹配 ‘a’，’m’或’k’</td>
+</tr>
+<tr>
+<td>[^…]</td>
+<td>不在[]中的字符：[^abc] 匹配除了a,b,c之外的字符。</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配0个或多个的表达式。</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配1个或多个的表达式。</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配0个或1个由前面的正则表达式定义的片段，非贪婪方式</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>精确匹配n个前面表达式。</td>
+</tr>
+<tr>
+<td>{n, m}</td>
+<td>匹配 n 到 m 次由前面的正则表达式定义的片段，贪婪方式</td>
+</tr>
+<tr>
+<td>a&#124;b</td>
+<td>匹配a或b</td>
+</tr>
+<tr>
+<td>( )</td>
+<td>匹配括号内的表达式，也表示一个组</td>
+</tr>
+</tbody></table>
+<h2 id="re-match"><a href="#re-match" class="headerlink" title="re.match"></a>re.match</h2><p>re.match 尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match()就返回none。<br>re.match(pattern, string, flags=0)</p>
+<h3 id="最常规的匹配"><a href="#最常规的匹配" class="headerlink" title="最常规的匹配"></a>最常规的匹配</h3><p>import re</p>
+<p>content = ‘Hello 123 4567 World_This is a Regex Demo’<br>print(len(content)) # 41<br>result = re.match(‘^Hello\s\d\d\d\s\d{4}\s\w{10}.*Demo$’, content)<br>print(result) # &lt;_sre.SRE_Match object; span=(0, 41), match=’Hello 123 4567 World_This is a Regex Demo’&gt;<br>print(result.group()) #Hello 123 4567 World_This is a Regex Demo<br>print(result.span()) # (0, 41)</p>
+<h3 id="泛匹配"><a href="#泛匹配" class="headerlink" title="泛匹配"></a>泛匹配</h3><p>^Hello.*Demo$<br>import re</p>
+<p>content = ‘Hello 123 4567 World_This is a Regex Demo’<br>result = re.match(‘^Hello.*Demo$’, content)<br>print(result)<br>print(result.group())<br>print(result.span())</p>
+<h3 id="匹配目标"><a href="#匹配目标" class="headerlink" title="匹配目标"></a>匹配目标</h3><p>result.group(1)<br>import re</p>
+<p>content = ‘Hello 1234567 World_This is a Regex Demo’<br>result = re.match(‘^Hello\s(\d+)\sWorld.*Demo$’, content)<br>print(result)<br>print(result.group(1))<br>print(result.span())</p>
+<h3 id="贪婪匹配"><a href="#贪婪匹配" class="headerlink" title="贪婪匹配"></a>贪婪匹配</h3><p>import re</p>
+<p>content = ‘Hello 1234567 World_This is a Regex Demo’<br>result = re.match(‘^He.*(\d+).*Demo$’, content)<br>print(result)<br>print(result.group(1))</p>
+<h3 id="非贪婪匹配"><a href="#非贪婪匹配" class="headerlink" title="非贪婪匹配"></a>非贪婪匹配</h3><p>import re</p>
+<p>content = ‘Hello 1234567 World_This is a Regex Demo’<br>result = re.match(‘^He.*?(\d+).*Demo$’, content)<br>print(result)<br>print(result.group(1))</p>
+<h3 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h3><p>1.不使用re.S参数，则只在每一行内进行匹配，如果一行没有，就换下一行重新开始，不会跨行。</p>
+<p>2.使用re.S参数以后，正则表达式会将这个字符串作为一个整体，将“\n”当做一个普通的字符加入到这个字符串中，在整体中进行匹配。</p>
+<p>import re</p>
+<p>content = ‘’’Hello 1234567 World_This<br>is a Regex Demo<br>‘’’<br>result = re.match(‘^He.<em>?(\d+).</em>?Demo$’, content, re.S)<br>print(result.group(1))</p>
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>import re</p>
+<p>content = ‘price is $5.00’<br>result = re.match(‘price is $5.00’, content)<br>print(result)<br>import re</p>
+<p>content = ‘price is $5.00’<br>result = re.match(‘price is $5.00’, content)<br>print(result)<br>总结：尽量使用泛匹配、使用括号得到匹配目标、尽量使用非贪婪模式、有换行符就用re.S</p>
+<h2 id="re-search"><a href="#re-search" class="headerlink" title="re.search"></a>re.search</h2><p>re.search 扫描整个字符串并返回第一个成功的匹配。<br>import re</p>
+<p>content = ‘Extra stings Hello 1234567 World_This is a Regex Demo Extra stings’<br>result = re.match(‘Hello.<em>?(\d+).</em>?Demo’, content)<br>print(result)<br>import re</p>
+<p>content = ‘Extra stings Hello 1234567 World_This is a Regex Demo Extra stings’<br>result = re.search(‘Hello.<em>?(\d+).</em>?Demo’, content)<br>print(result)<br>print(result.group(1))<br>总结：为匹配方便，能用search就不用match</p>
+<h2 id="re-findall"><a href="#re-findall" class="headerlink" title="re.findall"></a>re.findall</h2><p>搜索字符串，以列表形式返回全部能匹配的子串。<br>import re</p>
+<p>html = ‘’’<div id="songs-list"><br>    <h2 class="title">经典老歌</h2><br>    <p class="introduction"><br>        经典老歌列表<br>    </p><br>    <ul id="list" class="list-group"><br>        <li data-view="2">一路上有你</li><br>        <li data-view="7"><br>            <a href="/2.mp3" singer="任贤齐">沧海一声笑</a><br>        </li><br>        <li data-view="4" class="active"><br>            <a href="/3.mp3" singer="齐秦">往事随风</a><br>        </li><br>        <li data-view="6"><a href="/4.mp3" singer="beyond">光辉岁月</a></li><br>        <li data-view="5"><a href="/5.mp3" singer="陈慧琳">记事本</a></li><br>        <li data-view="5"><br>            <a href="/6.mp3" singer="邓丽君">但愿人长久</a><br>        </li><br>    </ul></p>
+</div>'''
+results = re.findall('<li.*?href="(.*?)".*?singer="(.*?)">(.*?)</a>', html, re.S)
+print(results)
+print(type(results))
+for result in results:
+    print(result)
+    print(result[0], result[1], result[2])
+### re.sub
+替换字符串中每一个匹配的子串后返回替换后的字符串。
+import re
+
+<p>content = ‘Extra stings Hello 1234567 World_This is a Regex Demo Extra stings’<br>content = re.sub(‘\d+’, ‘’, content)<br>print(content)<br>import re</p>
+<p>content = ‘Extra stings Hello 1234567 World_This is a Regex Demo Extra stings’<br>content = re.sub(‘\d+’, ‘Replacement’, content)<br>print(content)<br>import re</p>
+<p>content = ‘Extra stings Hello 1234567 World_This is a Regex Demo Extra stings’<br>content = re.sub(‘(\d+)’, r’\1 8910’, content)<br>print(content)<br>import re</p>
+<p>html = ‘’’<div id="songs-list"><br>    <h2 class="title">经典老歌</h2><br>    <p class="introduction"><br>        经典老歌列表<br>    </p><br>    <ul id="list" class="list-group"><br>        <li data-view="2">一路上有你</li><br>        <li data-view="7"><br>            <a href="/2.mp3" singer="任贤齐">沧海一声笑</a><br>        </li><br>        <li data-view="4" class="active"><br>            <a href="/3.mp3" singer="齐秦">往事随风</a><br>        </li><br>        <li data-view="6"><a href="/4.mp3" singer="beyond">光辉岁月</a></li><br>        <li data-view="5"><a href="/5.mp3" singer="陈慧琳">记事本</a></li><br>        <li data-view="5"><br>            <a href="/6.mp3" singer="邓丽君">但愿人长久</a><br>        </li><br>    </ul></p>
+</div>'''
+
+<p>import re</p>
+<p>html = ‘’’<div id="songs-list"><br>    <h2 class="title">经典老歌</h2><br>    <p class="introduction"><br>        经典老歌列表<br>    </p><br>    <ul id="list" class="list-group"><br>        <li data-view="2">一路上有你</li><br>        <li data-view="7"><br>            <a href="/2.mp3" singer="任贤齐">沧海一声笑</a><br>        </li><br>        <li data-view="4" class="active"><br>            <a href="/3.mp3" singer="齐秦">往事随风</a><br>        </li><br>        <li data-view="6"><a href="/4.mp3" singer="beyond">光辉岁月</a></li><br>        <li data-view="5"><a href="/5.mp3" singer="陈慧琳">记事本</a></li><br>        <li data-view="5"><br>            <a href="/6.mp3" singer="邓丽君">但愿人长久</a><br>        </li><br>    </ul></p>
+</div>'''
+html = re.sub('<a.*?>|</a>', '', html)
+print(html)
+results = re.findall('<li.*?>(.*?)</li>', html, re.S)
+print(results)
+for result in results:
+    print(result.strip())
+## re.compile
+将正则字符串编译成正则表达式对象
+将一个正则表达式串编译成正则对象，以便于复用该匹配模式
+
+<p>import re</p>
+<p>content = ‘’’Hello 1234567 World_This<br>is a Regex Demo’’’<br>pattern = re.compile(‘Hello.*Demo’, re.S)<br>result = re.match(pattern, content)<br>#result = re.match(‘Hello.*Demo’, content, re.S)<br>print(result)</p>
+<h2 id="实战练习"><a href="#实战练习" class="headerlink" title="实战练习"></a>实战练习</h2><p>import requests<br>import re<br>content = requests.get(‘<a target="_blank" rel="noopener" href="https://book.douban.com/&#39;).text">https://book.douban.com/&#39;).text</a><br>pattern = re.compile(‘&lt;li.<em>?cover.<em>?href=”(.</em>?)”.<em>?title=”(.</em>?)”.<em>?more-meta.</em>?author”&gt;(.</em>?)</span>.<em>?year”&gt;(.</em>?)</span>.*?</li>‘, re.S)<br>results = re.findall(pattern, content)<br>for result in results:<br>    url, name, author, date = result<br>    author = re.sub(‘\s’, ‘’, author)<br>    date = re.sub(‘\s’, ‘’, date)<br>    print(url, name, author, date)</p>
 
       </div>
       <div class="post-tags-categories">
