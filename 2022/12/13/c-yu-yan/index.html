@@ -841,12 +841,18 @@ C语言没有string类型<span aria-hidden="true" class="line-numbers-rows"><spa
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 
-<span class="token comment">//局部变量和全局变量的名字建议不要相同-容易bug</span>
-<span class="token comment">//名字冲突时,局部变量优先</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="输入输出函数"><a href="#输入输出函数" class="headerlink" title="输入输出函数"></a>输入输出函数</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span>a<span class="token punctuation">)</span>
+<p><strong>//局部变量和全局变量的名字建议不要相同-容易bug</strong><br><strong>//名字冲突时,局部变量优先</strong></p>
+<h2 id="输入输出函数"><a href="#输入输出函数" class="headerlink" title="输入输出函数"></a><strong>输入输出函数</strong></h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span>a<span class="token punctuation">)</span>
 <span class="token function">sacnf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">)</span>	<span class="token comment">//&amp;取地址符号</span>
-<span class="token comment">//注意C语言变量定义在代码块最前面</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">//注意C语言变量定义在代码块最前面</span>
+    
+    vs会不推荐使用scanf推荐使用scanf_S  
+    在原文件第一行加上
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">_CRTSECURE_NO_WARNINGS</span> <span class="token expression"><span class="token number">1</span></span></span>
+    这是vs编译器提供的<span class="token punctuation">,</span>不是C语言标准<span class="token punctuation">,</span>不具有跨平台性
+   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="‘’C语言变量定义在代码块最前面’’"><a href="#‘’C语言变量定义在代码块最前面’’" class="headerlink" title="‘’C语言变量定义在代码块最前面’’"></a>‘’C语言变量定义在代码块最前面’’</h2><h2 id="变量的作用域和生命周期"><a href="#变量的作用域和生命周期" class="headerlink" title="变量的作用域和生命周期"></a>变量的作用域和生命周期</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token char">''</span>'
 作用域<span class="token operator">:</span>
@@ -862,6 +868,231 @@ C语言没有string类型<span aria-hidden="true" class="line-numbers-rows"><spa
     全局变量的生命周期<span class="token operator">:</span>在整个程序
 <span class="token char">''</span>'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>C语言中的常量分为以下以下几种:·</p>
+<ul>
+<li><p>字面常量</p>
+<pre class="line-numbers language-none"><code class="language-none">3;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>const修饰的常变量</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">const</span> 常属性
+<span class="token keyword">const</span>修饰常变量
+<span class="token keyword">const</span> <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+使变量转换为常量
+令num不可以变<span class="token punctuation">,</span>是变量具有常属性
+
+
+<span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> arr<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">&#125;</span> <span class="token punctuation">;</span>
+报错
+<span class="token keyword">const</span> <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> arr<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+n是变量<span class="token punctuation">,</span>具有常属性
+报错
+<span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+运行
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>#define定义的标识符常量</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAX</span> <span class="token expression"><span class="token number">10</span></span></span>
+<span class="token comment">//令MAX = 10</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li><p>枚举常量</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//枚举:'一一列举'</span>
+<span class="token comment">//	性别:男女中性</span>
+<span class="token comment">//	三原色:红黄蓝</span>
+
+<span class="token comment">//枚举类型	</span>
+<span class="token keyword">enum</span> <span class="token class-name">Sex</span>
+<span class="token punctuation">&#123;</span>
+	MALE<span class="token punctuation">,</span>
+	FEMALE<span class="token punctuation">,</span>
+	SECRET
+<span class="token punctuation">&#125;</span>
+<span class="token comment">//MALE,FEMALE,SECRET是枚举常量编号0.1.2</span>
+<span class="token keyword">int</span> <span class="token function">mian</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">enum</span> <span class="token class-name">Sex</span> s <span class="token operator">=</span> FAMLE<span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h2 id="字符串-转义字符-注释字符串"><a href="#字符串-转义字符-注释字符串" class="headerlink" title="字符串+转义字符+注释字符串"></a>字符串+转义字符+注释字符串</h2><p>“he11o bit. \n”<br>这种由双引号( Double Quote )引起来的一串字符称为字符串字面值(String Literal )，或者简称字符串。</p>
+<p>注∶</p>
+<p><strong>字符串的结束标志是一个\0</strong>的转义字符。</p>
+<p>在<strong>计算字符串长度的时候\0是结束标志，不算作字符串内容。</strong></p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">char</span> arr1<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"abe"</span> <span class="token punctuation">;</span>
+    <span class="token comment">//'a','b','c','\0'</span>
+    <span class="token keyword">char</span> arr2<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token char">'a'</span><span class="token punctuation">,</span><span class="token char">'b'</span><span class="token punctuation">,</span><span class="token char">'c'</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">char</span> arr3<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token char">'a'</span><span class="token punctuation">,</span><span class="token char">'b'</span><span class="token punctuation">,</span><span class="token char">'c'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> arr1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%S\n"</span><span class="token punctuation">,</span>arr2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%S\n"</span><span class="token punctuation">,</span>arr3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span> <span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">//abc</span>
+<span class="token comment">//abc烫烫烫烫菌bc</span>
+<span class="token comment">//abc</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>ASCLL码表</strong></p>
+<p><img src="E:\markdown\图片管理处\image-20230104104708701.png" class="lazyload placeholder" data-srcset="E:\markdown\图片管理处\image-20230104104708701.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20230104104708701"></p>
+<h3 id="strlen-—-计算字符串的长度的"><a href="#strlen-—-计算字符串的长度的" class="headerlink" title="strlen()—-计算字符串的长度的"></a><strong>strlen()—-计算字符串的长度的</strong></h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//引入头文件</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+
+	<span class="token keyword">char</span> arr1<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"abc"</span> <span class="token punctuation">;</span>
+	<span class="token keyword">char</span> arr2<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token char">'a'</span><span class="token punctuation">,</span> <span class="token char">' b'</span><span class="token punctuation">,</span> <span class="token char">'c'</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d \n"</span>， <span class="token function">strlen</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">;</span> 
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span>，<span class="token function">strlen</span><span class="token punctuation">(</span>arr2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">/*
+3
+15[随机值]
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a><strong>转义字符</strong></h3><p>‘<strong>\t’</strong>—–水平制表符类似tab键</p>
+<p>‘<strong>??+字符</strong>‘—–<strong>三字母词</strong>—–解决方法—–’<strong>?</strong>‘</p>
+<pre class="line-numbers language-none"><code class="language-none">&quot;\\&quot;&#x3D;\<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">&quot;\&#39;&quot; &#x3D; &#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">&#39;\32&#39; &#x3D; 32是作为八进制代表的十进制的ASCLL表的的字符
+
+0x32 &#x3D; 26
+寻找26的字符 &#x3D;&#x3D;&#x3D;&#x3D;&gt;&#39;-&gt;&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">&#39;\x61&#39; &#x3D; 十六进制转十进制再查ASCLL表  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>转义字符属于一个字符</strong></p>
+<hr>
+<hr>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><p>&lt;&lt;和&gt;&gt;</p>
+<pre class="line-numbers language-none"><code class="language-none">0000000000000000000000001
+&lt;&lt;1左移一个
+0000000000000000000000010<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>&amp; 按位与</p>
+<pre class="line-numbers language-none"><code class="language-none">011
+110
+&amp;
+010<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>|按位或</p>
+<pre class="line-numbers language-none"><code class="language-none">011
+110
+|
+111<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>^按位异或</p>
+<pre class="line-numbers language-none"><code class="language-none">011
+110
+^
+101
+对应的二进制位相同，则为0
+对应的二进制位相异，则为1
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>**==**判断是否相等</p>
+<p>**=**赋值操作符</p>
+<p>a**=a+<strong>10与a</strong>+=**10</p>
+<p>单目操作符</p>
+<pre class="line-numbers language-none"><code class="language-none">c语言我们表示真假
+0-假
+非0-真<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">!
++
+-
+&amp;
+sizeof   	--计算的是变量或类型的所占空间大小
+~    	对一个数的二进制按位取反
+--  	前置、后置--
+++   	前置、后置++
+*     	间接访问操作符(解引用操作符)
+(类型)	强制类型转换
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="原码-反码-补码"><a href="#原码-反码-补码" class="headerlink" title="原码,反码,补码"></a>原码,反码,补码</h2><ul>
+<li>负数在内存中存储的时候,<strong>存储时二进制的补码</strong></li>
+<li>二进制最高位是符号数,是1时打印的是这个数的原码</li>
+</ul>
+<p>补码-&gt;反码</p>
+<pre class="line-numbers language-none"><code class="language-none">111111111111
+111111111110<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>反码-&gt;原码</p>
+<pre class="line-numbers language-none"><code class="language-none">111111111110
+100000000001<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">在学习原码，反码和补码之前， 需要先了解机器数和真值的概念。
+
+1、机器数
+
+一个数在计算机中的二进制表示形式，叫做这个数的机器数。机器数是带符号的，在计算机用机器数的最高位存放符号，正数为0，负数为1。
+
+比如，十进制中的数 +3 ，计算机字长为8位，转换成二进制就是0000 0011。如果是 -3 ，就是 100 00011 。
+
+那么，这里的 0000 0011 和 1000 0011 就是机器数。
+
+2、机器数的真值
+
+因为第一位是符号位，所以机器数的形式值就不等于真正的数值。
+
+例如上面的有符号数 1000 0011，其最高位1代表负，其真正数值是 -3，而不是形式值131（1000 0011转换成十进制等于131）。所以，为区别起见，将带符号位的机器数对应的真正数值称为机器数的真值。
+
+例：0000 0001的真值 &#x3D; +000 0001 &#x3D; +1，1000 0001的真值 &#x3D; –000 0001 &#x3D; –1
+二. 原码, 反码, 补码的基础概念和计算方法
+
+在探求为何机器要使用补码之前，让我们先了解原码、反码和补码的概念。对于一个数，计算机要使用一定的编码方式进行存储，原码、反码、补码是机器存储一个具体数字的编码方式。
+
+1. 原码
+
+原码就是符号位加上真值的绝对值，即用第一位表示符号，其余位表示值。比如：如果是8位二进制：
+
+[+1]原&#x3D; 0000 0001
+
+[-1]原&#x3D; 1000 0001
+
+第一位是符号位，因为第一位是符号位，所以8位二进制数的取值范围就是：（即第一位不表示值，只表示正负。）
+
+[1111 1111 , 0111 1111]
+
+即
+
+[-127 , 127]
+
+原码是人脑最容易理解和计算的表示方式。
+
+2. 反码
+
+反码的表示方法是：
+
+正数的反码是其本身；
+
+负数的反码是在其原码的基础上，符号位不变，其余各个位取反。
+
+[+1] &#x3D; [0000 0001]原&#x3D; [0000 0001]反
+
+[-1] &#x3D; [1000 0001]原&#x3D; [1111 1110]反
+
+可见如果一个反码表示的是负数，人脑无法直观的看出来它的数值。通常要将其转换成原码再计算。
+
+3. 补码
+
+补码的表示方法是：
+
+正数的补码就是其本身；
+
+负数的补码是在其原码的基础上，符号位不变，其余各位取反，最后+1。(也即在反码的基础上+1)
+
+[+1] &#x3D; [0000 0001]原&#x3D; [0000 0001]反&#x3D; [0000 0001]补
+
+[-1] &#x3D; [1000 0001]原&#x3D; [1111 1110]反&#x3D; [1111 1111]补
+
+对于负数，补码表示方式也是人脑无法直观看出其数值的。通常也需要转换成原码再计算其数值。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI0OTQwNDQxMw==&amp;mid=2247483760&amp;idx=1&amp;sn=27cbdd41da43b5b71c9f7a3ae807fae6">https://mp.weixin.qq.com/s?__biz=MzI0OTQwNDQxMw==&amp;mid=2247483760&amp;idx=1&amp;sn=27cbdd41da43b5b71c9f7a3ae807fae6</a></p>
+<p>​                </p>
 
       </div>
       <div class="post-tags-categories">
