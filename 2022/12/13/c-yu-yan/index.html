@@ -801,7 +801,8 @@ b &#x3D;3.33333333<span aria-hidden="true" class="line-numbers-rows"><span></spa
 %f  &#x2F;&#x2F;单精度浮点数float
 %lf &#x2F;&#x2F;双精度浮点数double
 %c &#x2F;&#x2F;char
-%s &#x2F;&#x2F;多字符<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+%s &#x2F;&#x2F;多字符
+%p &#x2F;&#x2F;与&amp;配合,打印地址<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="字符数据"><a href="#字符数据" class="headerlink" title="字符数据"></a>字符数据</h2><pre class="line-numbers language-none"><code class="language-none">char a&#x3D;&#39;k&#39;; &#x2F;&#x2F;单引号,只能放一个字符
 printf(&quot;%d&quot;,a); &#x2F;&#x2F;输出ASCLL表上的值
@@ -1092,7 +1093,11 @@ sizeof   	--计算的是变量或类型的所占空间大小
 对于负数，补码表示方式也是人脑无法直观看出其数值的。通常也需要转换成原码再计算其数值。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI0OTQwNDQxMw==&amp;mid=2247483760&amp;idx=1&amp;sn=27cbdd41da43b5b71c9f7a3ae807fae6">https://mp.weixin.qq.com/s?__biz=MzI0OTQwNDQxMw==&amp;mid=2247483760&amp;idx=1&amp;sn=27cbdd41da43b5b71c9f7a3ae807fae6</a></p>
-<p>​                </p>
+<p><strong>‘static</strong>修饰<strong>局部变量</strong>‘</p>
+<p>局部变量的生命周期变长’</p>
+<p><strong>static</strong>修饰<strong>全局变量</strong></p>
+<p>改变了<strong>变量的作用域</strong>–让净态的全局变量只能在自己所在的源文件内部使用出了源文件就没法再使用了<br>——-‘extern -声明外部符号的</p>
+<p>一个字节占一个空间</p>
 
       </div>
       <div class="post-tags-categories">

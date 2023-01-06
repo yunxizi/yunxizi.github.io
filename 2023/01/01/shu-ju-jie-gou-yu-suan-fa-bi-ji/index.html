@@ -1137,7 +1137,341 @@ int LocateElem( SeqList L,int e)&#123;
 <p><strong>c语言中，结构体的比较不能直接用“== ‘</strong></p>
 <p>时间复杂度:</p>
 <p>最好O(1):目标元素在第一个位置<br>最坏O(n)︰目标元素在最后一个位置<br>平均o(n):目标元素在每个位置的概率相同</p>
+<h2 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h2><p>每个结点除了存放数据元素外,还要存储指向.下一个节点的指针</p>
+<p>优点:不要求大片连续空间，改变容量方便</p>
+<p>缺点:不可随机存取，要耗费一定空间存放指针</p>
+<h3 id="定义一个单链表"><a href="#定义一个单链表" class="headerlink" title="定义一个单链表"></a>定义一个单链表</h3><pre class="line-numbers language-none"><code class="language-none">struct LNode&#123;
+	ElemType data;
+	struct LNode *next;
+&#125;;
+struct LNode *p &#x3D; (struct LNode *) malloc(sizeof(struct LNode));
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>typedef 关键字――数据类型重命名</p>
+<pre class="line-numbers language-none"><code class="language-none">typedef&lt;数据类型&gt;&lt;别名&gt;
+typedef int zhengshu;
+typedef int *zhengshuzhizhen;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">typedef struct LNode&#123;
+	ElemType data;
+	struct LNode *next;
+&#125;LNode,*LinkList;
+
+struct LNode&#123;
+	ElemType data;
+	struct LNode *next;
+&#125;;
+typedef struct LNode LNode;
+typedef struct LNode *LinkList;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>要表示一个单链表时，只需声明一个头指针L，</p>
+<pre class="line-numbers language-none"><code class="language-none">指向单链表的第一个结点LNode * L;&#x2F;&#x2F;声明一个指向单链表第一个结点的指针----强调返回的是结点
+
+或: LinkList L;&#x2F;&#x2F;声明一个指向单链表第一个结点的指针----强调这是单链表
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>强调这是一个单链表</li>
+<li>――使用LinkList</li>
+<li>强调这是一个结点</li>
+<li>——使用LNode *</li>
+</ul>
+<h3 id="不带头节点的单链表"><a href="#不带头节点的单链表" class="headerlink" title="不带头节点的单链表"></a>不带头节点的单链表</h3><pre class="line-numbers language-none"><code class="language-none">typedef struct LNode&#123;
+	ElemType data;
+	struct LNode *next;
+&#125;LNode，*LinkList;
+
+bool InitList(LinkList) &#123;
+	L &#x3D; NULL;&#x2F;&#x2F;防止脏数据
+	return true;
+&#125;
+
+void test( )&#123;
+	LinkList L;&#x2F;&#x2F;此时并没有创建一个节点
+		&#x2F;&#x2F;声明一个指向单链表的指针
+		&#x2F;&#x2F;初始化一个空表
+	InitList(L);
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>不带头结点,写代码更麻烦<br>对第一个数据结点和后续数据结点的处理需要用不同的代码逻辑<br>对空表和非空表的处理需要用不同的代码逻辑</p>
+<h3 id="带头节点的单链表"><a href="#带头节点的单链表" class="headerlink" title="带头节点的单链表"></a>带头节点的单链表</h3><pre class="line-numbers language-none"><code class="language-none">typedef struct LNode&#123;
+&#x2F;&#x2F;定义单链表结点类型
+	ElemType data;
+&#x2F;&#x2F;每个节点存放一个数据元素
+	struct LNode *next;
+&#x2F;&#x2F;指针指向下一个节点
+&#125;LNode，*LinkList;
+
+&#x2F;&#x2F;初始化一个单链表（带头结点)
+bool InitList(LinkList &amp;L) &#123;
+	L &#x3D; ( LNode *) malloc(sizeof( LNode) );&#x2F;&#x2F;分配一个头结点
+	if (L&#x3D;&#x3D;NULL)
+	&#x2F;&#x2F;内存不足，分配失败
+	return false;
+	L-&gt;next &#x3D; NULL;
+	&#x2F;&#x2F;头结点之后暂时还没有节点
+	return true;
+&#125;
+void test()&#123;
+	LinkList L;&#x2F;&#x2F;声明一个指向单链表的指针
+	&#x2F;&#x2F;初始化一个空表
+	InitList(L);
+&#x2F;&#x2F; ......后续代码......
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>带头结点,写代码更方便,用过都说好</p>
+<h3 id="按位序插入（带头结点）"><a href="#按位序插入（带头结点）" class="headerlink" title="按位序插入（带头结点）"></a>按位序插入（带头结点）</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//在第i 个位置插插入元素e (带头结点)</span>
+bool <span class="token function">ListInsert</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> ElemType e<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span> i<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token comment">//指针p指向当前扫描到的结点</span>
+	<span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment">//当前p指向的是第几个结点</span>
+	p <span class="token operator">=</span> L<span class="token punctuation">;</span><span class="token comment">//L指向头结点，头结点是第0个结点(不存数据)</span>
+	<span class="token keyword">while</span> <span class="token punctuation">(</span>p<span class="token operator">!=</span><span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> j<span class="token operator">&lt;</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token comment">//循环找到第i-1 个结点</span>
+		p<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+		j<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span> p<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token comment">//i值不合法</span>
+	<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>s <span class="token operator">=</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span> LNode<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	s<span class="token operator">-></span>data <span class="token operator">=</span> e<span class="token punctuation">;</span>
+	s<span class="token operator">-></span>next<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>p<span class="token operator">-></span>next<span class="token operator">=</span>s<span class="token punctuation">;</span>
+	<span class="token comment">//将结点s连到p之后</span>
+	<span class="token keyword">return</span> true<span class="token punctuation">;</span>
+	<span class="token comment">//插入成功</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意:</p>
+<pre class="line-numbers language-none"><code class="language-none">S-&gt;next&#x3D;p-&gt;next;
+p-&gt;next&#x3D;s;
+顺序不能乱,防止丢失后面数据
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>平均时间复杂度:<br>                O(n)</p>
+<h4 id="按位序插入（不带头结点"><a href="#按位序插入（不带头结点" class="headerlink" title="按位序插入（不带头结点)"></a>按位序插入（不带头结点)</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c">bool <span class="token function">ListInsert</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> ElemType e<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span> i<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<span class="token comment">//插入第1个结点的操作与其他结点操作不同</span>
+	LNode <span class="token operator">*</span>s <span class="token operator">=</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span> LNode<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	s<span class="token operator">-></span>data <span class="token operator">=</span> e<span class="token punctuation">;</span>
+	s<span class="token operator">-></span>next<span class="token operator">=</span>L<span class="token punctuation">;</span>
+	L<span class="token operator">=</span>s<span class="token punctuation">;</span>
+	<span class="token comment">//头指针指向新结点</span>
+	<span class="token keyword">return</span> true<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+	LNode <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token comment">//指针p指向当前扫描到的结点int 	j=1;//当前p指向的是第几个结点p = L;</span>
+	<span class="token comment">// p指向第1个结点（注意:不是头结点)</span>
+	<span class="token keyword">while</span> <span class="token punctuation">(</span>p<span class="token operator">!=</span><span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span>j<span class="token operator">&lt;</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token comment">//循环找到第i-1个结点</span>
+		p<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+		j<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span> p<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token comment">//i值不合法</span>
+	<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>s <span class="token operator">=</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>LNode<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	s<span class="token operator">-></span>data <span class="token operator">=</span> e<span class="token punctuation">;</span>
+	s<span class="token operator">-></span>next<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>p<span class="token operator">-></span>next<span class="token operator">=</span>s<span class="token punctuation">;</span>
+	<span class="token keyword">return</span> true<span class="token punctuation">;</span><span class="token operator">/</span>插入成功
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="指定结点的后插操作"><a href="#指定结点的后插操作" class="headerlink" title="指定结点的后插操作"></a>指定结点的后插操作</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//在第i个位置插插入元素e.(带头结点)</span>
+bool <span class="token function">ListInsert</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">,</span> <span class="token keyword">int</span> i，ElemType e<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token comment">//指针p指向当前扫描到的结点</span>
+    <span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment">//当前p指向的是第几个结点</span>
+    p <span class="token operator">=</span> L<span class="token punctuation">;</span><span class="token comment">//L指向头结点，头结点是第0个结点(不存数据)</span>
+	<span class="token keyword">while</span> <span class="token punctuation">(</span>p <span class="token operator">!=</span><span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> j<span class="token operator">&lt;</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//循环找到第i-1 个结点</span>
+		p<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+		j<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span> p<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token comment">//i值不合法</span>
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>s <span class="token operator">=</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span> 	LNode<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    s<span class="token operator">-></span>data <span class="token operator">=</span> e<span class="token punctuation">;</span>
+	s<span class="token operator">-></span>next<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>p<span class="token operator">-></span>next<span class="token operator">=</span>s<span class="token punctuation">;</span>
+	<span class="token comment">//将结点s连到p之后</span>
+	<span class="token keyword">return</span> true<span class="token punctuation">;</span>
+	<span class="token comment">//插入成功</span>
+<span class="token punctuation">&#125;</span>
+
+
+<span class="token comment">//后插操作:在p结点之后插入元素e</span>
+bool <span class="token function">InsertNextNode</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span>p<span class="token punctuation">,</span>ElemType e<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span> p<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>s <span class="token operator">=</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>LNode<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span> s<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>l<span class="token operator">/</span>内存分配失败
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	s<span class="token operator">-></span>data <span class="token operator">=</span> e<span class="token punctuation">;</span>
+	<span class="token comment">//用结点s保存数据元素e</span>
+	s<span class="token operator">-></span>next<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+	p<span class="token operator">-></span>next<span class="token operator">=</span>s<span class="token punctuation">;</span>
+	<span class="token comment">//将结点s连到p之后</span>
+	<span class="token keyword">return</span> true<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="指定结点的前插操作"><a href="#指定结点的前插操作" class="headerlink" title="指定结点的前插操作"></a>指定结点的前插操作</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//前插操作:在p结点之前插入元素e</span>
+bool <span class="token function">InsertPriorNode</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span>p<span class="token punctuation">,</span>ElemType e<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span> p<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+LNode <span class="token operator">*</span>s <span class="token operator">=</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span> LNode<span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span> s<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token comment">//内存分配失败</span>
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	S<span class="token operator">-></span>next<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+    p<span class="token operator">-></span>next<span class="token operator">=</span>s<span class="token punctuation">;</span>
+	<span class="token comment">//新结点s连到p之后</span>
+	s<span class="token operator">-></span>data<span class="token operator">=</span>p<span class="token operator">-></span>data<span class="token punctuation">;</span>
+	<span class="token comment">//将p中元素复制到s中</span>
+	p<span class="token operator">-></span>data<span class="token operator">=</span>e<span class="token punctuation">;</span>
+<span class="token comment">//	p中元素覆盖为e</span>
+	<span class="token keyword">return</span> true<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">//时间复杂度:O(1)</span>
+
+<span class="token comment">//前插操作:在p结点之前插入结点s</span>
+bool <span class="token function">InsertPriorNode</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span>p<span class="token punctuation">,</span>LNode <span class="token operator">*</span>s<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span> p<span class="token operator">==</span><span class="token constant">NULL</span> ll s<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	s<span class="token operator">-></span>next<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>p<span class="token operator">-></span>next<span class="token operator">=</span>s<span class="token punctuation">;</span>
+	<span class="token comment">//s连到p之后</span>
+	ElemType temp<span class="token operator">=</span>p<span class="token operator">-></span>data<span class="token punctuation">;</span><span class="token comment">//交换数据域部分&#125;'</span>
+    p<span class="token operator">-></span>data<span class="token operator">=</span>s<span class="token operator">-></span>data<span class="token punctuation">;</span>
+	s<span class="token operator">-></span>data<span class="token operator">=</span>temp<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="按位序删除（带头结点"><a href="#按位序删除（带头结点" class="headerlink" title="按位序删除（带头结点)"></a>按位序删除（带头结点)</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c">bool <span class="token function">ListDelete</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span>ElemType <span class="token operator">&amp;</span>e<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token comment">//指针p指向当前扫描到的结点</span>
+    <span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">//当前p指向的是第几个结点p = L;</span>
+	<span class="token comment">//L指向头结点，头结点是第0个结点(不存数据)</span>
+	<span class="token keyword">while</span> <span class="token punctuation">(</span>p<span class="token operator">!=</span><span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span>j<span class="token operator">&lt;</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//循环找到第i-1个结点</span>
+		p<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+		j<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span> p<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token comment">//i值不合法</span>
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>p<span class="token operator">-></span>next <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+	<span class="token comment">//第i-1个结点之后已无其他结点</span>
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>q<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+	<span class="token comment">//令q指向被删除结点</span>
+	e <span class="token operator">=</span> q<span class="token operator">-></span>data<span class="token punctuation">;</span>
+	<span class="token comment">//用e返回元素的值</span>
+	p<span class="token operator">-></span>next<span class="token operator">=</span>q<span class="token operator">-></span>next<span class="token punctuation">;</span>
+	<span class="token comment">//将*q结点从链中“断开”</span>
+	<span class="token function">free</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">//释放结点的存储空间</span>
+	<span class="token keyword">return</span> true<span class="token punctuation">;</span>
+	<span class="token comment">//删除成功</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="指定结点的删除"><a href="#指定结点的删除" class="headerlink" title="指定结点的删除"></a>指定结点的删除</h4><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;删除指定结点p
+bool DeleteNode ( LNode *p)&#123;
+	if ( p&#x3D;&#x3D;NULL)
+		return false;
+	LNode_*q&#x3D;p-&gt;next;
+	&#x2F;&#x2F;令q指向*p的后继结点
+	p-&gt;datap-&gt;next-&gt;data
+&#x2F;&#x2F;和后继结点交换数据域
+	p-&gt;next&#x3D;q-&gt;next;
+	&#x2F;&#x2F;将*q结点从链中“断开”
+	free(q);
+&#x2F;&#x2F;释放后继结点的存储空间
+	return true;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="单链表的查找"><a href="#单链表的查找" class="headerlink" title="单链表的查找"></a>单链表的查找</h2><h4 id="按位查找"><a href="#按位查找" class="headerlink" title="按位查找"></a>按位查找</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//按位查找，返回第i 个元素（带头结点)</span>
+LNode <span class="token operator">*</span> <span class="token function">GetElem</span><span class="token punctuation">(</span> LinkList L<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token operator">/</span>指针p指向当前扫描到的结点<span class="token keyword">int</span> 		j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token comment">//当前p指向的是第几个结点</span>
+	p <span class="token operator">=</span> L<span class="token punctuation">;</span>
+	<span class="token comment">//L指向头结点，头结点是第0个结点(不存数据)</span>
+	<span class="token keyword">while</span> <span class="token punctuation">(</span>p <span class="token operator">!=</span><span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> j<span class="token operator">&lt;</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//循环找到第i 个结点</span>
+		p<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+		j<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">return</span> p<span class="token punctuation">;</span>
+
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="按值查找"><a href="#按值查找" class="headerlink" title="按值查找"></a>按值查找</h4><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;按值查找，找到数据域&#x3D;&#x3D;e 的结点
+LNode * LocateElem( LinkList L,ElemType e) &#123;
+	LNode *p &#x3D; L-&gt;next;
+	&#x2F;&#x2F;从第1个结点开始查找数据域为e的结点	while (p !&#x3D; NULL &amp;&amp; p-&gt;data !&#x3D; e)
+		p &#x3D; p-&gt;next;
+	return p;&#x2F;&#x2F;找到后返回该结点指针，否则返回NULL
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="单链表的建立"><a href="#单链表的建立" class="headerlink" title="单链表的建立"></a>单链表的建立</h2><h4 id="尾插法"><a href="#尾插法" class="headerlink" title="尾插法:"></a>尾插法:</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//在第i 个位置插插入元素e (带头结点)</span>
+bool <span class="token function">ListInsert</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> ElemType e<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span> i<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span> false<span class="token punctuation">;</span>
+	LNode <span class="token operator">*</span>p<span class="token punctuation">;</span><span class="token comment">//指针p指向当前扫描到的结点	int j=0;//当前p指向的是第几个结点</span>
+	p <span class="token operator">=</span>L<span class="token punctuation">;</span><span class="token comment">//指向头结点，头结点是第2个结点_(丕存数据)</span>
+	<span class="token keyword">while</span> <span class="token punctuation">(</span>p<span class="token operator">!=</span><span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> j<span class="token operator">&lt;</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token comment">//循环找到第i-1个结点l</span>
+		p<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+		j<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>p<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token comment">//i值不合法</span>
+        <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+
+    <span class="token punctuation">&#125;</span>
+    LNode <span class="token operator">*</span>s <span class="token operator">=</span> <span class="token punctuation">(</span> LNode <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span> LNode<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    s<span class="token operator">-></span>data <span class="token operator">=</span> e<span class="token punctuation">;</span>
+	s<span class="token operator">-></span>next<span class="token operator">=</span>p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+	p<span class="token operator">-></span>next<span class="token operator">=</span>s<span class="token punctuation">;</span>
+	<span class="token comment">//将结点s连到p之后</span>
+	<span class="token keyword">return</span> true<span class="token punctuation">;</span>
+	<span class="token comment">//插入成功</span>
+<span class="token punctuation">&#125;</span>
+
+
+时间复杂度<span class="token function">O</span><span class="token punctuation">(</span>n<span class="token operator">^</span><span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">LinkList <span class="token function">List_Taillnsert</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token comment">//正向建立单链表</span>
+	<span class="token keyword">int</span> x<span class="token punctuation">;</span><span class="token comment">//设ElemType为整型</span>
+	L<span class="token operator">=</span><span class="token punctuation">(</span>LinkList<span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>LNode<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token number">1</span><span class="token operator">/</span>建立头结点
+    LNode <span class="token operator">*</span>s<span class="token punctuation">,</span><span class="token operator">*</span>r<span class="token operator">=</span>L<span class="token punctuation">;</span>
+	<span class="token comment">//r为表尾指针</span>
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span> <span class="token punctuation">,</span><span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">//输入结点的值</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>x<span class="token operator">!=</span><span class="token number">9999</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token comment">//输入9999表示结束</span>
+		s<span class="token operator">=</span><span class="token punctuation">(</span>LNode <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>LNode<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		s<span class="token operator">-></span>data<span class="token operator">=</span>x<span class="token punctuation">;</span>
+		r<span class="token operator">-></span>next<span class="token operator">=</span>s<span class="token punctuation">;</span>r<span class="token operator">=</span>s<span class="token punctuation">;</span>
+<span class="token comment">//r指向新的表尾结点</span>
+		<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span> <span class="token punctuation">,</span><span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+	r<span class="token operator">-></span>next<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+	<span class="token comment">//尾结点指针置空</span>
+	<span class="token keyword">return</span> L<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="头插法"><a href="#头插法" class="headerlink" title="头插法"></a>头插法</h3>
       </div>
       <div class="post-tags-categories">
         
