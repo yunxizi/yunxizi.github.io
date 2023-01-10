@@ -732,7 +732,7 @@ print(y)
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>逸出字符</p>
-<p><img src="E:\markdown\新建文件夹\image-20220823113055337.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823113055337.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823113055337"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823113055337.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823113055337.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823113055337"></p>
 <p>避免使用逸出字符</p>
 <pre class="line-numbers language-none"><code class="language-none">print(r&#39;hello!\npython&#39;)
 print(&#39;hello!\npython&#39;)
@@ -742,9 +742,9 @@ print(&#39;hello!\npython&#39;)
 <h2 id="python辅助说明-help"><a href="#python辅助说明-help" class="headerlink" title="python辅助说明 help()"></a>python辅助说明 help()</h2><pre class="line-numbers language-none"><code class="language-none">help(print)
 #　可以列出ｐｙｔｈｏｎ的指令或函数的使用说明<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h2 id="print"><a href="#print" class="headerlink" title="print"></a>print</h2><h3 id="精准格式化输出"><a href="#精准格式化输出" class="headerlink" title=".精准格式化输出"></a>.精准格式化输出</h3><p><img src="E:\markdown\新建文件夹\image-20220823113942722.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823113942722.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823113942722"></p>
-<h3 id="输出数据到文件"><a href="#输出数据到文件" class="headerlink" title=".输出数据到文件"></a>.输出数据到文件</h3><p><img src="E:\markdown\新建文件夹\image-20220823114907381.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823114907381.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823114907381"></p>
-<p><img src="E:\markdown\新建文件夹\image-20220823114924188.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823114924188.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823114924188"></p>
+<h2 id="print"><a href="#print" class="headerlink" title="print"></a>print</h2><h3 id="精准格式化输出"><a href="#精准格式化输出" class="headerlink" title=".精准格式化输出"></a>.精准格式化输出</h3><p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823113942722.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823113942722.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823113942722"></p>
+<h3 id="输出数据到文件"><a href="#输出数据到文件" class="headerlink" title=".输出数据到文件"></a>.输出数据到文件</h3><p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823114907381.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823114907381.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823114907381"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823114924188.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823114924188.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823114924188"></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">su <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'./01.txt'</span><span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'ni hao'</span><span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token operator">=</span>su<span class="token punctuation">)</span>
 su<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -847,7 +847,10 @@ c <span class="token operator">=</span> a <span class="token operator">+</span> 
 <span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
 <span class="token comment"># 0.30000004</span>
 <span class="token comment"># 精度丢失,如果在处理一些银行或者金融大数据等要求比较严格的地方不能直接简单的+或者-,后期可以使用其他库函数</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+</li>
 <li><p>复数</p>
 </li>
 </ul>
@@ -994,8 +997,8 @@ python标记清除机制:
 依次对于表现良好的.设置权重,检查次数降低,
 减少运行亮<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\markdown\新建文件夹\image-20220820164042729.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220820164042729.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220820164042729"></p>
-<p><img src="E:\markdown\新建文件夹\image-20220820165558076.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220820165558076.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220820165558076"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220820164042729.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220820164042729.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220820164042729"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220820165558076.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220820165558076.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220820165558076"></p>
 <h2 id="用户交互"><a href="#用户交互" class="headerlink" title="用户交互:"></a>用户交互:</h2><pre class="line-numbers language-none"><code class="language-none">input(&#39;提示&#39;).存入字符串类型
 强制类型转换.int(),float(),
 
@@ -1071,7 +1074,7 @@ or 逻辑或 从前往后依次判断
 优先级:
 not&gt;and&gt;or<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\markdown\新建文件夹\Python运算符优先级.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\Python运算符优先级.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Python运算符优先级"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\Python运算符优先级.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\Python运算符优先级.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Python运算符优先级"></p>
 <h2 id="成员运算符"><a href="#成员运算符" class="headerlink" title="成员运算符"></a>成员运算符</h2><pre class="line-numbers language-none"><code class="language-none">in
 在里面吗?
 字典判断key是否在
@@ -1098,8 +1101,8 @@ l3 &#x3D; l1.copy()
 当列表全是不可变类型,可以正常使用,新列表改变不会影响到原列表.
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\markdown\新建文件夹\image-20220820175409681.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220820175409681.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220820175409681"></p>
-<p><img src="E:\markdown\新建文件夹\image-20220820180119133.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220820180119133.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220820180119133"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220820175409681.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220820175409681.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220820175409681"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220820180119133.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220820180119133.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220820180119133"></p>
 <h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title=".深拷贝"></a>.深拷贝</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">l1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'张'</span><span class="token punctuation">,</span><span class="token string">'李'</span><span class="token punctuation">,</span><span class="token string">'王'</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
 <span class="token comment"># 导入copy模块</span>
 <span class="token keyword">import</span> copy
@@ -1308,7 +1311,7 @@ print(names.replace(&#39;-&#39;, &#39;:&#39;))
 <pre class="line-numbers language-none"><code class="language-none">print(&#39;84&#39;.isdigit)
 # 返回布尔值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="E:\markdown\新建文件夹\image-20220823144022884.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823144022884.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823144022884"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823144022884.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823144022884.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823144022884"></p>
 <h3 id="count"><a href="#count" class="headerlink" title="count"></a>count</h3><pre class="line-numbers language-none"><code class="language-none">count(子串,开始索引,结束索引)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="just"><a href="#just" class="headerlink" title="just"></a>just</h3><pre class="line-numbers language-none"><code class="language-none">name &#x3D; &#39;哈哈&#39;
@@ -1331,7 +1334,7 @@ print(f&#39;查看find:&#123;name.find(&quot;张无忌&quot;,0,3)&#125;&#39;)
 #  extend(追加的目标对象) 将元素迭代后以后加入
 #  insert(index,插入的目标对象)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="—————-4——————"><a href="#—————-4——————" class="headerlink" title="—————-4——————-"></a>—————-4——————-</h1><h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="赋值"><a href="#赋值" class="headerlink" title="赋值 ="></a>赋值 =</h2><h2 id="四则运算"><a href="#四则运算" class="headerlink" title="四则运算"></a>四则运算</h2><pre class="line-numbers language-none"><code class="language-none">a&#x3D;10
+<h1 id="—————-4——————"><a href="#—————-4——————" class="headerlink" title="—————-4——————-"></a>—————-4——————-</h1><h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="赋值-x3D"><a href="#赋值-x3D" class="headerlink" title="赋值 &#x3D;"></a>赋值 &#x3D;</h2><h2 id="四则运算"><a href="#四则运算" class="headerlink" title="四则运算"></a>四则运算</h2><pre class="line-numbers language-none"><code class="language-none">a&#x3D;10
 b&#x3D;3
 print(a*b)  30乘
 print(a&#x2F;b)  3.3333333333333335除以
@@ -1400,7 +1403,7 @@ print(not(a &gt; b))<span aria-hidden="true" class="line-numbers-rows"><span></s
 print(&#39;大于&#39; if 1 &gt; 2 else &#39;不大于&#39;)
 print(&#39;大于&#39; if 1 else &#39;不大于&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="is和"><a href="#is和" class="headerlink" title="is和=="></a>is和==</h2><pre class="line-numbers language-none"><code class="language-none"># is与&#x3D;&#x3D; 的区别
+<h2 id="is和-x3D-x3D"><a href="#is和-x3D-x3D" class="headerlink" title="is和&#x3D;&#x3D;"></a>is和&#x3D;&#x3D;</h2><pre class="line-numbers language-none"><code class="language-none"># is与&#x3D;&#x3D; 的区别
 
 #　is判断id是否相同
 
@@ -1418,7 +1421,7 @@ not in
 是否不在里面吗?
 字典判断key是否在<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p><img src="E:\markdown\VIP_python\img\Python运算符优先级.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\Python运算符优先级.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Python运算符优先级"></p>
+<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\Python运算符优先级.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\Python运算符优先级.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Python运算符优先级"></p>
 <h1 id="————————5——————"><a href="#————————5——————" class="headerlink" title="————————5——————-"></a>————————5——————-</h1><h1 id="lt-1-gt-字符串的定义"><a href="#lt-1-gt-字符串的定义" class="headerlink" title="&lt;1&gt;字符串的定义"></a>&lt;1&gt;字符串的定义</h1><pre class="line-numbers language-none"><code class="language-none">字符串就是一串字符，是编程语言中表示文本的数据类型
 
 在 Python 中可以使用 一对双引号 &quot; 或者 一对单引号 &#39; 定义一个字符串 (注意是英文的符号)
@@ -1618,8 +1621,8 @@ l[2] &#x3D; &#39;刺客&#39; # 因为列表里不存在l[2],所以会报错<span
 负索引:-9,-8,-7,-6,-5,-4,-3,-2,-1
 步长不写数值,默认为1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="内置方法用于计算"><a href="#内置方法用于计算" class="headerlink" title=".内置方法用于计算"></a>.内置方法用于计算</h2><p><img src="E:\markdown\VIP_python\image-20220901113950066.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\image-20220901113950066.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901113950066"></p>
-<p><img src="E:\markdown\VIP_python\image-20220901114037488.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\image-20220901114037488.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901114037488"></p>
+<h2 id="内置方法用于计算"><a href="#内置方法用于计算" class="headerlink" title=".内置方法用于计算"></a>.内置方法用于计算</h2><p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\image-20220901113950066.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\image-20220901113950066.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901113950066"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\image-20220901114037488.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\image-20220901114037488.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901114037488"></p>
 <h2 id="更改列表的值"><a href="#更改列表的值" class="headerlink" title=".更改列表的值"></a>.更改列表的值</h2><pre class="line-numbers language-none"><code class="language-none">list1[1] &#x3D; &#39;帅哥&#39;
 通过列表名和索引更改<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -1717,7 +1720,7 @@ print(list1)
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\markdown\VIP_python\img\image-20220901115457848.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\image-20220901115457848.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901115457848"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220901115457848.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220901115457848.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901115457848"></p>
 <h2 id="列表的排序"><a href="#列表的排序" class="headerlink" title=".列表的排序"></a>.列表的排序</h2><pre class="line-numbers language-none"><code class="language-none">.reverse
 颠倒列表的排序
 类似于list1[::-1]
@@ -1884,12 +1887,12 @@ tuple(range(5))<span aria-hidden="true" class="line-numbers-rows"><span></span><
 <p>max()</p>
 <p>min()</p>
 </blockquote>
-<h2 id="enumerate-1"><a href="#enumerate-1" class="headerlink" title=".enumerate"></a>.enumerate</h2><p><img src="E:\markdown\VIP_python\img\image-20220903145511965.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\image-20220903145511965.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220903145511965"></p>
+<h2 id="enumerate-1"><a href="#enumerate-1" class="headerlink" title=".enumerate"></a>.enumerate</h2><p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220903145511965.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220903145511965.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220903145511965"></p>
 <h2 id="zip"><a href="#zip" class="headerlink" title=".zip"></a>.zip</h2><pre class="line-numbers language-none"><code class="language-none">内置函数,参数主要是可迭代对象.
 将相应的元素打包成元组,最后传给zip对象.
 可以用list函数将zip对象转化为列表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="E:\markdown\VIP_python\img\image-20220903145751804.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\image-20220903145751804.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220903145751804"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220903145751804.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220903145751804.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220903145751804"></p>
 <pre class="line-numbers language-none"><code class="language-none">如果放在zip函数的列表参数不相等,多出的元素无法匹配,选择较短的数量输出<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>恢复为列表</p>
@@ -2090,7 +2093,7 @@ print(dict)<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 
 
 
-<p> 如果B条件作为真，输出X=A<br> 如果B为假，那么输出X=C</p>
+<p> 如果B条件作为真，输出X&#x3D;A<br> 如果B为假，那么输出X&#x3D;C</p>
 </blockquote>
 <h1 id="—————-9—————————"><a href="#—————-9—————————" class="headerlink" title="—————-9—————————"></a>—————-9—————————</h1><h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>是当做一个整体去做去重,关系运算</p>
 <h2 id="定义集合"><a href="#定义集合" class="headerlink" title=".定义集合"></a>.定义集合</h2><pre class="line-numbers language-none"><code class="language-none">jihe &#x3D; &#123;a,s,d,f&#125;
@@ -2102,7 +2105,7 @@ print(dict)<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 set_1 &#x3D; set()
 定义的,注意是()不是&#123;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="关系运算-1"><a href="#关系运算-1" class="headerlink" title=".关系运算"></a>.关系运算</h2><p><img src="E:\markdown\VIP_python\img\image-20220908094521562.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\image-20220908094521562.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094521562"></p>
+<h2 id="关系运算-1"><a href="#关系运算-1" class="headerlink" title=".关系运算"></a>.关系运算</h2><p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094521562.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094521562.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094521562"></p>
 <pre class="line-numbers language-none"><code class="language-none">hobbys_1 &#x3D; &#123;1, 2, 3, 4, 5, 6&#125;
 hobbys_2 &#x3D; &#123;1, 2, 3&#125;
 
@@ -2136,8 +2139,8 @@ print(res)
 hobbys_1 &#x3D; &#123;1,2&#125;
 hobbys_2 &#x3D; &#123;1,2,3&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="内置方法"><a href="#内置方法" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="C:\Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" class="lazyload placeholder" data-srcset="C:\Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094012718"></p>
-<p><img src="E:\markdown\VIP_python\img\image-20220908094835772.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\image-20220908094835772.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094835772"></p>
+<h3 id="内置方法"><a href="#内置方法" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="/2022/09/12/01-python-ji-chu/Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094012718"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094835772.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094835772.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094835772"></p>
 <h2 id="去重-1"><a href="#去重-1" class="headerlink" title=".去重"></a>.去重</h2><pre class="line-numbers language-none"><code class="language-none">l &#x3D; [1,2,1,3,13,5,2]
 print(set(1))
 #　不可变去重<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -2191,7 +2194,7 @@ x &#x3D; frozenset([1,2,3])
 set_1 &#x3D; set()
 定义的,注意是()不是&#123;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="关系运算-2"><a href="#关系运算-2" class="headerlink" title=".关系运算"></a>.关系运算</h2><p><img src="E:\markdown\VIP_python\img\image-20220908094521562.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\image-20220908094521562.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094521562"></p>
+<h2 id="关系运算-2"><a href="#关系运算-2" class="headerlink" title=".关系运算"></a>.关系运算</h2><p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094521562.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094521562.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094521562"></p>
 <pre class="line-numbers language-none"><code class="language-none">hobbys_1 &#x3D; &#123;1, 2, 3, 4, 5, 6&#125;
 hobbys_2 &#x3D; &#123;1, 2, 3&#125;
 
@@ -2225,8 +2228,8 @@ print(res)
 hobbys_1 &#x3D; &#123;1,2&#125;
 hobbys_2 &#x3D; &#123;1,2,3&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="内置方法-1"><a href="#内置方法-1" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="C:\Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" class="lazyload placeholder" data-srcset="C:\Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094012718"></p>
-<p><img src="E:\markdown\VIP_python\img\image-20220908094835772.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\image-20220908094835772.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094835772"></p>
+<h3 id="内置方法-1"><a href="#内置方法-1" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="/2022/09/12/01-python-ji-chu/Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094012718"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094835772.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094835772.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094835772"></p>
 <h2 id="去重-2"><a href="#去重-2" class="headerlink" title=".去重"></a>.去重</h2><pre class="line-numbers language-none"><code class="language-none">l &#x3D; [1,2,1,3,13,5,2]
 print(set(1))
 #　不可变去重<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -2280,7 +2283,7 @@ x &#x3D; frozenset([1,2,3])
 set_1 &#x3D; set()
 定义的,注意是()不是&#123;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="关系运算-3"><a href="#关系运算-3" class="headerlink" title=".关系运算"></a>.关系运算</h2><p><img src="E:\markdown\VIP_python\img\image-20220908094521562.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\image-20220908094521562.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094521562"></p>
+<h2 id="关系运算-3"><a href="#关系运算-3" class="headerlink" title=".关系运算"></a>.关系运算</h2><p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094521562.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094521562.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094521562"></p>
 <pre class="line-numbers language-none"><code class="language-none">hobbys_1 &#x3D; &#123;1, 2, 3, 4, 5, 6&#125;
 hobbys_2 &#x3D; &#123;1, 2, 3&#125;
 
@@ -2314,8 +2317,8 @@ print(res)
 hobbys_1 &#x3D; &#123;1,2&#125;
 hobbys_2 &#x3D; &#123;1,2,3&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="内置方法-2"><a href="#内置方法-2" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="C:\Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" class="lazyload placeholder" data-srcset="C:\Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094012718"></p>
-<p><img src="E:\markdown\VIP_python\img\image-20220908094835772.png" class="lazyload placeholder" data-srcset="E:\markdown\VIP_python\img\image-20220908094835772.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094835772"></p>
+<h3 id="内置方法-2"><a href="#内置方法-2" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="/2022/09/12/01-python-ji-chu/Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/Users\yunxizi\AppData\Roaming\Typora\typora-user-images\image-20220908094012718.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094012718"></p>
+<p><img src="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094835772.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\VIP_python\img\image-20220908094835772.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220908094835772"></p>
 <h2 id="去重-3"><a href="#去重-3" class="headerlink" title=".去重"></a>.去重</h2><pre class="line-numbers language-none"><code class="language-none">l &#x3D; [1,2,1,3,13,5,2]
 print(set(1))
 #　不可变去重<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -2575,8 +2578,8 @@ print(res)
 hobbys_1 &#x3D; &#123;1,2&#125;
 hobbys_2 &#x3D; &#123;1,2,3&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="内置方法-4"><a href="#内置方法-4" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="E:\markdown\新建文件夹\image-20220823170547307.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823170547307.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170547307"></p>
-<h3 id="父子集"><a href="#父子集" class="headerlink" title="..父子集"></a>..父子集</h3><p><img src="E:\markdown\新建文件夹\image-20220823170407273.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823170407273.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170407273"></p>
+<h3 id="内置方法-4"><a href="#内置方法-4" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823170547307.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823170547307.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170547307"></p>
+<h3 id="父子集"><a href="#父子集" class="headerlink" title="..父子集"></a>..父子集</h3><p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823170407273.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823170407273.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170407273"></p>
 <h2 id="去重-4"><a href="#去重-4" class="headerlink" title=".去重"></a>.去重</h2><pre class="line-numbers language-none"><code class="language-none">l &#x3D; [1,2,1,3,13,5,2]
 print(set(1))
 #　不可变去重<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -2822,8 +2825,8 @@ print(res)
 hobbys_1 &#x3D; &#123;1,2&#125;
 hobbys_2 &#x3D; &#123;1,2,3&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="内置方法-6"><a href="#内置方法-6" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="E:\markdown\新建文件夹\image-20220823170547307.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823170547307.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170547307"></p>
-<h3 id="父子集-1"><a href="#父子集-1" class="headerlink" title="..父子集"></a>..父子集</h3><p><img src="E:\markdown\新建文件夹\image-20220823170407273.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823170407273.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170407273"></p>
+<h3 id="内置方法-6"><a href="#内置方法-6" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823170547307.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823170547307.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170547307"></p>
+<h3 id="父子集-1"><a href="#父子集-1" class="headerlink" title="..父子集"></a>..父子集</h3><p><img src="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823170407273.png" class="lazyload placeholder" data-srcset="/2022/09/12/01-python-ji-chu/markdown\新建文件夹\image-20220823170407273.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170407273"></p>
 <h2 id="去重-5"><a href="#去重-5" class="headerlink" title=".去重"></a>.去重</h2><pre class="line-numbers language-none"><code class="language-none">l &#x3D; [1,2,1,3,13,5,2]
 print(set(1))
 #　不可变去重<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>

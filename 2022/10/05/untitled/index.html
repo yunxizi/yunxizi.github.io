@@ -711,14 +711,14 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <p>#include&lt;stdio.h&gt;<br>#define Maxsize 100//定义maxsize等于100,同时作为顺序表的最大长度,注意define后面不用加’;’<br>typedef int ElemType;//定义int的别名为ElemType,增加代码的可移植性<br>typedef struct{//初始化<br>    ElemType *elem; //顺序表的基地址,初始地址<br>    int length;//顺序表的长度,元素的个数<br>}SqList;//定义struct别名为SqList,在定义一个顺序表时,不需要写struct,直接是SqList L;<br>//初始化顺序表<br>bool InitList(SqList &amp;L){//构造一个空的顺序表L<br>    //L的前面加上’&amp;’表示引用参数,函数内部的改变,在跳出后在函数值会被更改<br>    //如果不加’&amp;’,函数内部的改变在跳出函数后便会无效</p>
+        <p>#include&lt;stdio.h&gt;<br>#define Maxsize 100&#x2F;&#x2F;定义maxsize等于100,同时作为顺序表的最大长度,注意define后面不用加’;’<br>typedef int ElemType;&#x2F;&#x2F;定义int的别名为ElemType,增加代码的可移植性<br>typedef struct{&#x2F;&#x2F;初始化<br>    ElemType *elem; &#x2F;&#x2F;顺序表的基地址,初始地址<br>    int length;&#x2F;&#x2F;顺序表的长度,元素的个数<br>}SqList;&#x2F;&#x2F;定义struct别名为SqList,在定义一个顺序表时,不需要写struct,直接是SqList L;<br>&#x2F;&#x2F;初始化顺序表<br>bool InitList(SqList &amp;L){&#x2F;&#x2F;构造一个空的顺序表L<br>    &#x2F;&#x2F;L的前面加上’&amp;’表示引用参数,函数内部的改变,在跳出后在函数值会被更改<br>    &#x2F;&#x2F;如果不加’&amp;’,函数内部的改变在跳出函数后便会无效</p>
 <pre><code>L.elem=new int[Maxsize];//L的基地址分配大小为100的数组,作为顺序表分配的空间
 if(!L.elem) return false;//如果没有分配成功,就像里面是0,&#39;!&#39;取反,进入并返回false
 L.length=0;//定义顺序表的长度为0,目前为初始状态
 return true;
 </code></pre>
-<p>}<br>//创建一个顺序表,同样是向顺序表输入数据<br>bool CreaeList(SqList &amp;L){<br>    int x,i=0;<br>    scanf(“%d”, x);//输入x<br>    while(x!=1){//设置输入为-1时结束,也可以是其他<br>        if(L.length==Maxsize){ //判断顺序表的长度是否为最大值了<br>            printf(“顺序表已满”);<br>            return false;<br>        }<br>        //scanf(“%d”,x);<br>        L.elem[i++]=x;//设置将数据存入第i个位置,然后I++(先用再自增)<br>        L.length++;//因为上面已经存入一个数据,所以顺序表的长度+1<br>        //scanf(“%d”,x);//输入一个数据元素<br>    }<br>    return true;<br>}</p>
-<p>//取值,随机存取,位序和下标差1<br>bool GetElem(SqList L,int i,int &amp;e){//形参SqList L为查找的顺讯表,i为需要查找的位置,e是需要返回i位置查找的值<br>    if(i&lt;1||i&gt;L.length) return false;//判断查找的位置,如果i&lt;0或者i&gt;顺序表的长度,返回一个错误值</p>
+<p>}<br>&#x2F;&#x2F;创建一个顺序表,同样是向顺序表输入数据<br>bool CreaeList(SqList &amp;L){<br>    int x,i&#x3D;0;<br>    scanf(“%d”, x);&#x2F;&#x2F;输入x<br>    while(x!&#x3D;1){&#x2F;&#x2F;设置输入为-1时结束,也可以是其他<br>        if(L.length&#x3D;&#x3D;Maxsize){ &#x2F;&#x2F;判断顺序表的长度是否为最大值了<br>            printf(“顺序表已满”);<br>            return false;<br>        }<br>        &#x2F;&#x2F;scanf(“%d”,x);<br>        L.elem[i++]&#x3D;x;&#x2F;&#x2F;设置将数据存入第i个位置,然后I++(先用再自增)<br>        L.length++;&#x2F;&#x2F;因为上面已经存入一个数据,所以顺序表的长度+1<br>        &#x2F;&#x2F;scanf(“%d”,x);&#x2F;&#x2F;输入一个数据元素<br>    }<br>    return true;<br>}</p>
+<p>&#x2F;&#x2F;取值,随机存取,位序和下标差1<br>bool GetElem(SqList L,int i,int &amp;e){&#x2F;&#x2F;形参SqList L为查找的顺讯表,i为需要查找的位置,e是需要返回i位置查找的值<br>    if(i&lt;1||i&gt;L.length) return false;&#x2F;&#x2F;判断查找的位置,如果i&lt;0或者i&gt;顺序表的长度,返回一个错误值</p>
 <p>}<br>int main(){</p>
 <p>return 0;<br>}</p>
 

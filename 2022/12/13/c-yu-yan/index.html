@@ -844,7 +844,7 @@ C语言没有string类型<span aria-hidden="true" class="line-numbers-rows"><spa
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><strong>//局部变量和全局变量的名字建议不要相同-容易bug</strong><br><strong>//名字冲突时,局部变量优先</strong></p>
+<p><strong>&#x2F;&#x2F;局部变量和全局变量的名字建议不要相同-容易bug</strong><br><strong>&#x2F;&#x2F;名字冲突时,局部变量优先</strong></p>
 <h2 id="输入输出函数"><a href="#输入输出函数" class="headerlink" title="输入输出函数"></a><strong>输入输出函数</strong></h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span>a<span class="token punctuation">)</span>
 <span class="token function">sacnf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">)</span>	<span class="token comment">//&amp;取地址符号</span>
 <span class="token comment">//注意C语言变量定义在代码块最前面</span>
@@ -872,7 +872,10 @@ C语言没有string类型<span aria-hidden="true" class="line-numbers-rows"><spa
 <h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>C语言中的常量分为以下以下几种:·</p>
 <ul>
 <li><p>字面常量</p>
-<pre class="line-numbers language-none"><code class="language-none">3;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class="line-numbers language-none"><code class="language-none">3;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+</li>
 <li><p>const修饰的常变量</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">const</span> 常属性
 <span class="token keyword">const</span>修饰常变量
@@ -890,10 +893,14 @@ n是变量<span class="token punctuation">,</span>具有常属性
 报错
 <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 运行
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+</li>
 <li><p>#define定义的标识符常量</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAX</span> <span class="token expression"><span class="token number">10</span></span></span>
-<span class="token comment">//令MAX = 10</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<span class="token comment">//令MAX = 10</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 <li><p>枚举常量</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//枚举:'一一列举'</span>
 <span class="token comment">//	性别:男女中性</span>
@@ -934,7 +941,7 @@ n是变量<span class="token punctuation">,</span>具有常属性
 <span class="token comment">//abc</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>ASCLL码表</strong></p>
-<p><img src="E:\markdown\图片管理处\image-20230104104708701.png" class="lazyload placeholder" data-srcset="E:\markdown\图片管理处\image-20230104104708701.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20230104104708701"></p>
+<p><img src="/2022/12/13/c-yu-yan/markdown\图片管理处\image-20230104104708701.png" class="lazyload placeholder" data-srcset="/2022/12/13/c-yu-yan/markdown\图片管理处\image-20230104104708701.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20230104104708701"></p>
 <h3 id="strlen-—-计算字符串的长度的"><a href="#strlen-—-计算字符串的长度的" class="headerlink" title="strlen()—-计算字符串的长度的"></a><strong>strlen()—-计算字符串的长度的</strong></h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//引入头文件</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
@@ -993,9 +1000,9 @@ n是变量<span class="token punctuation">,</span>具有常属性
 对应的二进制位相异，则为1
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>**==**判断是否相等</p>
-<p>**=**赋值操作符</p>
-<p>a**=a+<strong>10与a</strong>+=**10</p>
+<p>**&#x3D;&#x3D;**判断是否相等</p>
+<p>**&#x3D;**赋值操作符</p>
+<p>a**&#x3D;a+<strong>10与a</strong>+&#x3D;**10</p>
 <p>单目操作符</p>
 <pre class="line-numbers language-none"><code class="language-none">c语言我们表示真假
 0-假
@@ -1092,7 +1099,7 @@ sizeof   	--计算的是变量或类型的所占空间大小
 
 对于负数，补码表示方式也是人脑无法直观看出其数值的。通常也需要转换成原码再计算其数值。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI0OTQwNDQxMw==&amp;mid=2247483760&amp;idx=1&amp;sn=27cbdd41da43b5b71c9f7a3ae807fae6">https://mp.weixin.qq.com/s?__biz=MzI0OTQwNDQxMw==&amp;mid=2247483760&amp;idx=1&amp;sn=27cbdd41da43b5b71c9f7a3ae807fae6</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI0OTQwNDQxMw==&mid=2247483760&idx=1&sn=27cbdd41da43b5b71c9f7a3ae807fae6">https://mp.weixin.qq.com/s?__biz=MzI0OTQwNDQxMw==&amp;mid=2247483760&amp;idx=1&amp;sn=27cbdd41da43b5b71c9f7a3ae807fae6</a></p>
 <p><strong>‘static</strong>修饰<strong>局部变量</strong>‘</p>
 <p>局部变量的生命周期变长’</p>
 <p><strong>static</strong>修饰<strong>全局变量</strong></p>
