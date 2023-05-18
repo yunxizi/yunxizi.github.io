@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>归档: 2023/5 | 云昔子</title>
+  <title>python基础 | 云昔子</title>
 
   <link rel="icon" type="image/png" href="/logo1.png">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -639,106 +639,636 @@
     
 </header>
         <!-- 内容区域 -->
-        <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
-<div class="archive-header" style="background-image:url('https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c')">
-  <div class="archive-header-title">
-    archive
-  </div>
-  <div class="archive-header-desc">
-  
-  <span class="title" id="archive-header-desc"></span>
-  <script>
-  function typedFn() {
-    const el = '#archive-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-  
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<div class="archive-video">
-  <video class="full-video" autoplay loop muted>
-      <source style="width: 100%;height: 100vh;" src="/">
-  </video>
-  <div class="video-header-title">
-    archive
-  </div>
-  <div class="video-header-desc">
-  
-      <span class="title" id="archive-video-header-desc"></span>
-      <script>
-  function typedFn() {
-    const el = '#archive-video-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-      
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<!-- hash算法 -->
-
-
-<div class="archive-main">
-  <section class="archive">
-    <div class="archive-content">
-      <ul class="post-archive">
         
-        
-          
-            
-            <div class="year" data-aos="zoom-in-up">
-                <div class="bullet"></div>
-                <a href="/archives/2023">2023</a>
-            </div>
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/post/0.html" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">05-18</span>
-              </div>
-              <a class="post-title" href="/post/0.html"></a>
-            </div>
-          </li>
-        
-      </ul>
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/medias/3.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        python基础
+      </span>
     </div>
-  </section>
-  <div class="w-70">
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2022-09-12 |
+        </span>
+      
+
+      
+
+      
     
   </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
 </div>
+
+
+
+
+
+<div class="post-detail-content row justify-position" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>[TOC]</p>
+<h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><h1 id="列表list"><a href="#列表list" class="headerlink" title="列表list"></a>列表list</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">强制类型转换:</span><br><span class="line">list(可迭代对象)</span><br><span class="line">可变类型</span><br><span class="line">列表是python的内置可变有序序列,是包含若干个元素的有序连续内存空间,</span><br><span class="line">同一列表中元素的类型可以不同</span><br></pre></td></tr></table></figure>
+
+<h1 id="列表的方法"><a href="#列表的方法" class="headerlink" title="列表的方法:"></a>列表的方法:</h1><h2 id="按索引取值"><a href="#按索引取值" class="headerlink" title=".按索引取值"></a>.按索引取值</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">l = [&#x27;拉白&#x27;,&#x27;射手&#x27;]</span><br><span class="line">l[0] = &#x27;李白&#x27; #　更改了l[0]的值</span><br><span class="line">l[2] = &#x27;刺客&#x27; # 因为列表里不存在l[2],所以会报错</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="增加元素"><a href="#增加元素" class="headerlink" title=".增加元素"></a>.增加元素</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">l.append(5)</span><br><span class="line">只能在列表的末尾追加新值,原地修改(追加),</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">l=l+[7]</span><br><span class="line">加号运算符,严格意义上讲,是创建一个新列表,并将原列表的元素复制到新列表</span><br><span class="line">l=l+=[7]</span><br><span class="line">加等于运算符(合并列表,原地修改)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">l.insert(2,&#x27;刺客&#x27;)</span><br><span class="line">在列表指定位置index处添加元素.没有返回值,(原地操作,不创建新列表)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">l.extend(iterable)</span><br><span class="line">将可迭代对象iterable添加至列表尾部,)原地操作(</span><br></pre></td></tr></table></figure>
+
+<p>列表里拆入另一个列表的值.但是不是插入一个列表,而是将值赋给列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">l.extend(l2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">使用乘法来扩展</span><br><span class="line">l=l*3</span><br><span class="line">创建新列表,当使用*操作符将包含列表进行复制并创建新列表时,并不创建元素值的复制,而是创建元素值的引用,因此修改一个值时,相应的引用值也将修改</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除"><a href="#删除" class="headerlink" title=".删除"></a>.删除</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#　del</span><br><span class="line">names = [&#x27;nihao&#x27;, &#x27;haona&#x27;]</span><br><span class="line">del names[1]</span><br><span class="line">删除列表指定位置上的元素,后面的元素自动向前</span><br><span class="line"></span><br><span class="line"># pop</span><br><span class="line">names = [&#x27;nihao&#x27;, &#x27;haona&#x27;]</span><br><span class="line">st = names.pop(1)</span><br><span class="line"># 没有给定下标值的话，默认最后一个，有返回值。</span><br><span class="line"></span><br><span class="line"># remove</span><br><span class="line">names = [&#x27;nihao&#x27;, &#x27;haona&#x27;]</span><br><span class="line"># remove 根据元素的值进行(首次出现)删除,不存在列表中抛出异常,</span><br><span class="line">当删除或增加列表元素时,会自动扩展内存并对元素进行移动,以保证元素之间没有空隙,每当删除或追加一个元素之后,该元素后面的所有元素的索引就会改变</span><br><span class="line"></span><br><span class="line"># clear清理列表</span><br><span class="line">li = [1, 2, 3]</span><br><span class="line">li.clear()</span><br><span class="line">print(li)</span><br></pre></td></tr></table></figure>
+
+<h2 id="切片"><a href="#切片" class="headerlink" title=".切片"></a>.切片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">names = [&#x27;nihao&#x27;, &#x27;haona&#x27;]</span><br><span class="line">names[0:1:1]</span><br><span class="line"></span><br><span class="line">names[开始:结束:步长]</span><br><span class="line">开始默认为0</span><br><span class="line">结束默认列表长度</span><br><span class="line">步长默认为0</span><br><span class="line"></span><br><span class="line">切片操作不会因为下标越界而抛出异常,而是简单的在列表尾部截断或者返回一个空列表</span><br><span class="line"></span><br><span class="line">&gt;&gt;alist = [3,4,5]</span><br><span class="line">&gt;&gt;alist[:3]=[1,2,3]</span><br><span class="line">&gt;&gt;alist</span><br><span class="line">&gt;&gt;[1,2,3]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">切片是浅拷贝:是指生成一个新的列表,并且把原列表的所有元素值得引用都复制到新列表中</span><br><span class="line">数值相等,因为引用的地方一样,但A=B,A不是B</span><br><span class="line">&gt;&gt;A==B</span><br><span class="line">&gt;&gt;TURE</span><br><span class="line">&gt;&gt;A IS B</span><br><span class="line">&gt;&gt;FALSE</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="len-计算列表长度"><a href="#len-计算列表长度" class="headerlink" title=".len[计算列表长度]"></a>.len[计算列表长度]</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算长度</span><br></pre></td></tr></table></figure>
+
+<h2 id="成员运算"><a href="#成员运算" class="headerlink" title=".成员运算"></a>.成员运算</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">in</span><br><span class="line">判断列表中是否存在指定的值</span><br><span class="line"></span><br><span class="line">l = [1,2,3]</span><br><span class="line">&gt;&gt;4 in l</span><br><span class="line">&gt;&gt;false</span><br></pre></td></tr></table></figure>
+
+<h2 id="循环"><a href="#循环" class="headerlink" title=".循环"></a>.循环</h2><p>注意利用for循环遍历列表时不能在循环里更改列表(增或者删)</p>
+<h2 id="count-指定元素出现次数"><a href="#count-指定元素出现次数" class="headerlink" title=".count[指定元素出现次数]"></a>.count[指定元素出现次数]</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names.count(&#x27;数值&#x27;)</span><br><span class="line">计算数值出现的次数,知道指定元素在列表出现的次数</span><br></pre></td></tr></table></figure>
+
+<h2 id="reverse-翻转列表"><a href="#reverse-翻转列表" class="headerlink" title=".reverse[翻转列表]"></a>.reverse[翻转列表]</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">翻转列表里的数值</span><br><span class="line">与切片[::-1]</span><br><span class="line">不同的是切片的效果是复制一个新列表出来</span><br><span class="line">而reverse是直接改了原列表</span><br><span class="line">names.reverse</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="index-查找数值的索引"><a href="#index-查找数值的索引" class="headerlink" title=".index[查找数值的索引]"></a>.index[查找数值的索引]</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查找某一个数值的索引,可以获取指定元素首次出现的下标</span><br><span class="line">index(value,[start,[stop]])</span><br><span class="line">index(数值,[开始位置,[搜索结束位置]])</span><br><span class="line"></span><br><span class="line">names.index(数值)</span><br></pre></td></tr></table></figure>
+
+<h2 id="sort-排序"><a href="#sort-排序" class="headerlink" title=".sort[排序"></a>.sort[排序</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">l = [55,66,44,33,88,99]</span><br><span class="line">l.sort()</span><br><span class="line">print(l)</span><br><span class="line"> #不传值默认　从小到大排序</span><br><span class="line">l.sort(reverse=True)</span><br><span class="line">print(l)</span><br></pre></td></tr></table></figure>
+
+<p>.copy()浅复制</p>
+<h1 id="队列和栈"><a href="#队列和栈" class="headerlink" title="队列和栈"></a>队列和栈</h1><h2 id="队列-FIFO"><a href="#队列-FIFO" class="headerlink" title=".队列-FIFO"></a>.队列-FIFO</h2><p>first in first out</p>
+<p>先进先出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">进去</span><br><span class="line">l = []</span><br><span class="line">l.append(&#x27;1&#x27;)</span><br><span class="line">l.append(&#x27;2&#x27;)</span><br><span class="line">l.append(&#x27;3&#x27;)</span><br><span class="line">print(l) # [1,2,3]</span><br><span class="line">出来</span><br><span class="line">l.pop(0)</span><br><span class="line">print(l) # [2,3]</span><br><span class="line">l.pop(0)</span><br><span class="line">print(l) #[3]　</span><br><span class="line">l.pop(0)</span><br><span class="line">print(l) #[]</span><br></pre></td></tr></table></figure>
+
+<h2 id="队栈"><a href="#队栈" class="headerlink" title=".队栈"></a>.队栈</h2><p>先进后出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">进去</span><br><span class="line">l = []</span><br><span class="line">l.append(&#x27;1&#x27;)</span><br><span class="line">l.append(&#x27;2&#x27;)</span><br><span class="line">l.append(&#x27;3&#x27;)</span><br><span class="line">print(l) # [1,2,3]</span><br><span class="line"></span><br><span class="line">出来</span><br><span class="line">l.pop()</span><br><span class="line">print(l) # [1,2]</span><br><span class="line">l.pop()</span><br><span class="line">print(l) #[1]　</span><br><span class="line">l.pop()</span><br><span class="line">print(l) #[]</span><br></pre></td></tr></table></figure>
+
+<h1 id="元组tuple"><a href="#元组tuple" class="headerlink" title="元组tuple"></a>元组tuple</h1><p>是不可变类型  用()定义</p>
+<h2 id="当定义一个元组"><a href="#当定义一个元组" class="headerlink" title=".当定义一个元组"></a>.当定义一个元组</h2><p>时必须这样</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = (1,)</span><br><span class="line"># 加一个逗号</span><br></pre></td></tr></table></figure>
+
+<h2 id="不可变类型"><a href="#不可变类型" class="headerlink" title=".不可变类型"></a>.不可变类型</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">l =(1,2,&#x27;好&#x27;,[&#x27;1&#x27;,2,3])</span><br><span class="line">print(l)</span><br><span class="line"># l[2] = &#x27;不好&#x27;</span><br><span class="line"># 会报错,试图更改元组地址</span><br><span class="line">l[3][0] = 1</span><br><span class="line">不会报错.更改的是元组里面列表的地址,列表时可变类型</span><br></pre></td></tr></table></figure>
+
+<h2 id="元组与列表的优势"><a href="#元组与列表的优势" class="headerlink" title=".元组与列表的优势"></a>.元组与列表的优势</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">元组不可以改,且更加省空间</span><br></pre></td></tr></table></figure>
+
+<p>.类型转换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">只要能被for循环遍历的类型都可以转换为tuple</span><br><span class="line">tuple(&#x27;1&#x27;)</span><br><span class="line">tuple([1,2])</span><br><span class="line">tuple(&#123;&#x27;a&#x27;:1,&#x27;v&#x27;:2&#125;)</span><br><span class="line">tuple(range(5))</span><br></pre></td></tr></table></figure>
+
+<h2 id="index"><a href="#index" class="headerlink" title=".index"></a>.index</h2><h2 id="count"><a href="#count" class="headerlink" title=".count"></a>.count</h2><p>列表推导式:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">变量 = [表达式 for 变量 in 可迭代对象]</span><br><span class="line">变量 = [表达式 for 变量 in 可迭代对象 if 条件]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">random.randint(0,2)</span><br><span class="line">random.choise(list_1)#　随机选择列表一个数据 如果想随机一个列表里面的元素</span><br><span class="line">random.shuffle() 混淆,打乱顺序,洗牌</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果元组只有一个元素:一定要在第一个元素的后面单独加一个&#x27;,&#x27;  否则这个数据类型就是第一个元素的类型</span><br></pre></td></tr></table></figure>
+
+<p>元组:<br>一.定义<br>  不可变的一组序列,用()来创建,支持求片查找等操作<br>  列表会预留空间,用来增加元素,如果变量的个数是固定的,建议使用元组,占用空间会更小<br>  tips:<br>      1.unhashtable:固定的值—产生固定的hash值,而且这个值不会发生变化<br>      2.一般用来做记录数据,这才是元组的意义</p>
+<h1 id="字典tuple"><a href="#字典tuple" class="headerlink" title="字典tuple"></a>字典tuple</h1><h2 id="key必须是不可变类型"><a href="#key必须是不可变类型" class="headerlink" title=".key必须是不可变类型"></a>.key必须是不可变类型</h2><p>value:可以是任意类型</p>
+<p>字典里key不能相同,如果相同只存储一个</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">第一种</span><br><span class="line">dic = &#123;&#x27;aa&#x27;:1,&#x27;bb&#x27;=2&#125;</span><br><span class="line"></span><br><span class="line">第二种</span><br><span class="line">dict(&#123;&#x27;aa&#x27;:1,&#x27;bb&#x27;=2&#125;)</span><br><span class="line"></span><br><span class="line">第三种</span><br><span class="line">dict(aa=1,bb=2)</span><br><span class="line"></span><br><span class="line">第四种</span><br><span class="line">keys = [&#x27;name&#x27;,&#x27;sex&#x27;,&#x27;jiejie&#x27;]</span><br><span class="line">1.</span><br><span class="line">dic = &#123;&#125;</span><br><span class="line">for key in keys</span><br><span class="line">	dic[key] = None</span><br><span class="line">print(dic)</span><br><span class="line">2.</span><br><span class="line">a = &#123;&#125;.fromkeys(keys,None)</span><br><span class="line">print(dic)</span><br><span class="line"></span><br><span class="line">输出的结果都是</span><br><span class="line">&#123;&#x27;name&#x27;=None,&#x27;sex&#x27;=None,&#x27;jiejie&#x27;=None&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title=".强制类型转换"></a>.强制类型转换</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">必须成对出现才可以转换为字典</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="字典是无序"><a href="#字典是无序" class="headerlink" title=".字典是无序"></a>.字典是无序</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">更改字典</span><br><span class="line">dic = &#123;&#x27;a&#x27;:m&#125;</span><br><span class="line">dic[&#x27;a&#x27;] = b</span><br><span class="line"></span><br><span class="line">得到找字典的值</span><br><span class="line">dic = &#123;&#x27;a&#x27;:m&#125;</span><br><span class="line">dic.get(&#x27;a&#x27;)</span><br><span class="line"># 如果没有key 返回None</span><br></pre></td></tr></table></figure>
+
+<h2 id="内置方法"><a href="#内置方法" class="headerlink" title=".内置方法"></a>.内置方法</h2><p>E:\笔记\python\1.pdf\6.数据类型.pdf</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="思想"><a href="#思想" class="headerlink" title=".思想"></a>.思想</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tuple_1 = (<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">key, value = tuple_1</span><br><span class="line"><span class="built_in">print</span>(key, value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="集合set"><a href="#集合set" class="headerlink" title="集合set"></a>集合set</h1><p>是当做一个整体去做去重,关系运算</p>
+<h2 id="定义集合"><a href="#定义集合" class="headerlink" title=".定义集合"></a>.定义集合</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">jihe = &#123;a,s,d,f&#125;</span><br><span class="line"># 里面的元素必须是不可变类型</span><br><span class="line"># 其次集合里元素不能相同,如果相同只存储一个</span><br><span class="line">#　集合是无序的</span><br><span class="line"></span><br><span class="line">定义一个空集合,为避免和字典冲突是</span><br><span class="line">set_1 = set()</span><br><span class="line">定义的,注意是()不是&#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="关系运算"><a href="#关系运算" class="headerlink" title=".关系运算"></a>.关系运算</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">hobbys_1 = &#123;1, 2, 3, 4, 5, 6&#125;</span><br><span class="line">hobbys_2 = &#123;1, 2, 3&#125;</span><br><span class="line"></span><br><span class="line"># 取交集 &amp;</span><br><span class="line">res = hobbys_2 &amp; hobbys_1</span><br><span class="line">print(res)</span><br><span class="line"></span><br><span class="line"># 取并集 |</span><br><span class="line">res = hobbys_2 | hobbys_1</span><br><span class="line">print(res)</span><br><span class="line"></span><br><span class="line"># 取差集 - 需要注意顺序</span><br><span class="line">res = hobbys_2 - hobbys_1</span><br><span class="line">print(res,&#x27;2-1&#x27;)</span><br><span class="line">res = hobbys_1 - hobbys_2</span><br><span class="line">print(res,&#x27;1-2&#x27;)</span><br><span class="line"></span><br><span class="line"># 取对称差集 ^</span><br><span class="line">res = hobbys_2 ^ hobbys_1</span><br><span class="line">print(res)</span><br><span class="line">res = hobbys_1 ^ hobbys_2</span><br><span class="line">print(res)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">父子集 &gt; = &lt;</span><br><span class="line">hobbys_1 = &#123;1,2&#125;</span><br><span class="line">hobbys_2 = &#123;1,2,3&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="内置方法-1"><a href="#内置方法-1" class="headerlink" title="..内置方法"></a>..内置方法</h3><p><img src="E:\markdown\新建文件夹\image-20220823170547307.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823170547307.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170547307"></p>
+<h3 id="父子集"><a href="#父子集" class="headerlink" title="..父子集"></a>..父子集</h3><p><img src="E:\markdown\新建文件夹\image-20220823170407273.png" class="lazyload placeholder" data-srcset="E:\markdown\新建文件夹\image-20220823170407273.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220823170407273"></p>
+<h2 id="去重"><a href="#去重" class="headerlink" title=".去重"></a>.去重</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l = [1,2,1,3,13,5,2]</span><br><span class="line">print(set(1))</span><br><span class="line">#　不可变去重</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法"><a href="#方法" class="headerlink" title=".方法"></a>.方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set_1.isdisjoint(set_2)</span><br><span class="line">set_1.discard(某个值)</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据类型总结"><a href="#数据类型总结" class="headerlink" title="数据类型总结"></a>数据类型总结</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">总结:</span><br><span class="line">一.容器类型</span><br><span class="line">列表,元组,字典,集合</span><br><span class="line">二.标量,原子类型</span><br><span class="line">整型,浮点型,字符串</span><br><span class="line">三.可变与不可变</span><br><span class="line">1.可变类型</span><br><span class="line">列表,字典,集合</span><br><span class="line">2.不可变类型</span><br><span class="line">整型,浮点型,字符串,元组</span><br><span class="line"></span><br><span class="line">四,访问类型</span><br><span class="line">1.通过变量名来访问</span><br><span class="line">整型,浮点型</span><br><span class="line">2.通过索引来访问指定的值(序列类型)</span><br><span class="line">字符串,列表,元组</span><br><span class="line">3.通过key(映射类型)</span><br><span class="line">字典</span><br><span class="line">4.通过变量名访问整体(无法访问某一个值)</span><br><span class="line">集合</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      </div>
+      <div class="post-tags-categories">
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>云昔子</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/post/86ef.html" target="_blank" title="python基础">http://example.com/post/86ef.html</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/5.jpg" class="lazyload placeholder" data-srcset="/medias/5.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/post/d994.html" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">01-Python-基础</div>
+      </div>
+      
+      <!-- <div class="content">
+        目录[TOC]
+python的断行.一行有多个语句用’;’分开
+1y = 20;print(y)
+
+.将一个语句分成多行
+      </div> -->
+    </a>
+  </div>
+
+
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="/medias/2.jpg" class="lazyload placeholder" data-srcset="/medias/2.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      
+<section id="comments" style="padding: 1em;"
+	class="animated bounceInUp">
+	<div id="vcomment" class="comment"></div>
+</section>
+<style>
+	#comments {
+		background: rgba(255,255,255,0.9);
+	}
+	#veditor {
+		background-image: url('https://img.zcool.cn/community/01a253594c71cfa8012193a329a77f.gif');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: rgba(255, 255, 255, 0);
+		resize: vertical;
+	}
+	#veditor:focus{
+		background-position-y: 200px;
+		transition: all 0.2s ease-in-out 0s;
+	}
+	#vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
+		background-color: #42b983;
+	}
+	.v[data-class=v] .vbtn:active, .v[data-class=v] .vbtn:hover {
+		color: #42b983;
+		border-color: #42b983;
+	}
+	#vcomment .vcards .vcard .vhead .vsys i {
+		display: none;
+	}
+	/* 底部valine链接 */
+	#vcomment .vpower {
+		display: none;
+	}
+	
+	/* 底下注释是修改 名称和邮箱和网址输入框的样式 */
+	/* #vcomment .vheader {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	#vcomment .vheader .vnick {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vmail {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vlink {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	} */
+
+	img.vimg {
+		transition: all 1s;
+		/* 头像旋转时间为 1s */
+	}
+
+	img.vimg:hover {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+	}
+
+	#vcomment .vcards .vcard {
+		padding: 15px 20px 0 20px;
+		border-radius: 10px;
+		margin-bottom: 15px;
+		box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+		transition: all .3s
+	}
+
+	#vcomment .vcards .vcard:hover {
+		box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+	}
+
+	#vcomment .vcards .vcard .vh .vcard {
+		border: none;
+		box-shadow: none;
+	}
+</style>
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        
+          <div class="toc-open-close">本文目录</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端目录按钮 -->
+  <div id="toc-mobile-btn">
+    <i class="fas fa-list-ul" aria-hidden="true"></i>
+  </div>
+
+
+<script>
+  function closeToc(init) {
+    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
+    $(".toc-content").css({'width': 0});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+    $(".main-content").css({'width': '75%', 'margin-left': 'auto', 'margin-right': 'auto',});
+  };
+  function openToc() {
+    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
+    $(".toc-content").css({'width': '300px'});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+  }
+  function openBtnClickFn () {
+    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+    let open = eval('' || 'true');
+    openOrCloseBtn.click(function() {
+      if (open) {
+        closeToc();
+        open = false;
+      } else {
+        openToc();
+        open = true;
+      }
+    });
+  };
+  openBtnClickFn();
+  initCloseTocWidth(true);
+
+  function initCloseTocWidth(init) {
+    if (window.innerWidth >= 992) {
+      let isClose = false;
+      isClose && closeToc(init)
+    }
+  }
+
+  document.addEventListener('pjax:complete', function () {
+    $(".toc-aside").css({'transition': 'no'});
+  })
+  document.addEventListener('pjax:complete', function () {
+    openBtnClickFn();
+  })
+  
+</script>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
 
       </main>
     </div>

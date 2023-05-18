@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>归档: 2023/5 | 云昔子</title>
+  <title>python进阶笔记 | 云昔子</title>
 
   <link rel="icon" type="image/png" href="/logo1.png">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -639,106 +639,692 @@
     
 </header>
         <!-- 内容区域 -->
-        <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
-<div class="archive-header" style="background-image:url('https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c')">
-  <div class="archive-header-title">
-    archive
-  </div>
-  <div class="archive-header-desc">
-  
-  <span class="title" id="archive-header-desc"></span>
-  <script>
-  function typedFn() {
-    const el = '#archive-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-  
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<div class="archive-video">
-  <video class="full-video" autoplay loop muted>
-      <source style="width: 100%;height: 100vh;" src="/">
-  </video>
-  <div class="video-header-title">
-    archive
-  </div>
-  <div class="video-header-desc">
-  
-      <span class="title" id="archive-video-header-desc"></span>
-      <script>
-  function typedFn() {
-    const el = '#archive-video-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-      
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<!-- hash算法 -->
-
-
-<div class="archive-main">
-  <section class="archive">
-    <div class="archive-content">
-      <ul class="post-archive">
         
-        
-          
-            
-            <div class="year" data-aos="zoom-in-up">
-                <div class="bullet"></div>
-                <a href="/archives/2023">2023</a>
-            </div>
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/post/0.html" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">05-18</span>
-              </div>
-              <a class="post-title" href="/post/0.html"></a>
-            </div>
-          </li>
-        
-      </ul>
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/medias/4.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        python进阶笔记
+      </span>
     </div>
-  </section>
-  <div class="w-70">
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2022-09-13 |
+        </span>
+      
+
+      
+
+      
     
   </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
 </div>
+
+
+
+
+
+<div class="post-detail-content row justify-position" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <h1 id="python进阶笔记"><a href="#python进阶笔记" class="headerlink" title="python进阶笔记"></a>python进阶笔记</h1><h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><p>思想:<em>找人帮我做事</em></p>
+<ol>
+<li>面向过程:一步一步亲力亲为</li>
+</ol>
+<p>面向对象三大特征:封装性,继承性,多态性</p>
+<h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h1><blockquote>
+<p>函数是一个封装</p>
+<p>类也是一个更大封装</p>
+</blockquote>
+<h2 id="类"><a href="#类" class="headerlink" title="类:"></a>类:</h2><ol>
+<li>属性：事物的描述信息</li>
+<li>行为:事物的行动能力</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">类-:具有单个或者多个属性或者方法的集合体的统称,是抽象的.</span><br><span class="line">不能直接使用.</span><br><span class="line">类相当于制造飞机的图纸,是负责创建对象</span><br></pre></td></tr></table></figure>
+
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象:"></a>对象:</h2><ol>
+<li>对象是由类创建出的一个具体存在,</li>
+<li>可以直接使用</li>
+<li>由哪一个类创建,就具有哪一个类的属性和行为</li>
+<li>对象就像用图纸造出的飞机</li>
+</ol>
+<h2 id="类和对象的关系"><a href="#类和对象的关系" class="headerlink" title="类和对象的关系"></a>类和对象的关系</h2><ul>
+<li>类是模板,对象是根据类创建出来的</li>
+<li>先有类,再有对象</li>
+<li>一个类可以创建多个对象</li>
+<li></li>
+</ul>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li>类名用大驼峰法定义(首字母大写)</li>
+<li>属性–事物的特征</li>
+<li>方法–事物具有的行为</li>
+</ul>
+<h2 id="创建类"><a href="#创建类" class="headerlink" title="创建类"></a>创建类</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Fun</span>(<span class="title class_ inherited__">object</span>)  <span class="comment"># 定义类名</span></span><br><span class="line">	<span class="comment">#定义类的属性</span></span><br><span class="line">	age = <span class="number">10</span>       <span class="comment">#---实例属性</span></span><br><span class="line">    <span class="comment"># 定义类的方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">FunCement</span>(<span class="params">self,参数</span>): <span class="comment">#默认要有self这是对象的</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;行为&#x27;</span>) <span class="comment">#行为的具体表现</span></span><br><span class="line">        </span><br><span class="line">lo = Fun() <span class="comment"># lo是对象,Fun()是调用类,来创建对象lo,此时self是lo</span></span><br><span class="line">l1 = Fun() <span class="comment"># l1是对象,Fun()是调用类,来创建对象l1,此时self是l1  </span></span><br><span class="line"><span class="built_in">print</span>(Fun.age)</span><br></pre></td></tr></table></figure>
+
+<p>使用类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 在上面创建好类之后,目前只是将对象给创建出来</span><br><span class="line"># 接下来是使用</span><br><span class="line"></span><br><span class="line">lo.FunCement()</span><br><span class="line"># 会打印出&#x27;行为&#x27;,也就是使用函数FunCement()</span><br><span class="line"># 函数里面可以传参数</span><br><span class="line"># 其中由于FunCement(self)绑定fo,此时如果FunCement(self)函数里面</span><br><span class="line"># 使用self就表示调用对象自己</span><br><span class="line"></span><br><span class="line">l1.FunCement()</span><br><span class="line"># 会打印出&#x27;行为&#x27;,也就是使用函数FunCement()</span><br><span class="line"># 函数里面可以传参数</span><br><span class="line"># 其中由于FunCement(self)绑定l1,此时如果FunCement(self)函数里面</span><br><span class="line"># 使用self就表示调用对象自己</span><br></pre></td></tr></table></figure>
+
+<p>__init__的定义</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class 类名(object): </span><br><span class="line">	def __init__(self):</span><br><span class="line">    	print(&#x27;这里什么时候会被打印?&#x27;) </span><br><span class="line">    	# 直接创建对象 </span><br><span class="line">    	# 使用对象调用__init__方法</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在创建对象时,没有调用__init__方法的前提下,就直接把里面的函数输出了</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Cat(object): </span><br><span class="line"></span><br><span class="line">	&quot;&quot;&quot;模拟猫咪的尝试&quot;&quot;&quot;</span><br><span class="line">    def __init__(self，name， age): </span><br><span class="line">    	self.name = name # 实例属性 </span><br><span class="line">    	self.age = age # 实例属性 </span><br><span class="line">    	</span><br><span class="line">    def sleep(self): # 实例方法 </span><br><span class="line">    &quot;&quot;&quot;猫咪被命令睡觉&quot;&quot;&quot; </span><br><span class="line">    	print(&#x27;%d 岁的 %s猫 正在沙发上睡懒觉&#x27; % (self.age, self.name)) </span><br><span class="line">    	</span><br><span class="line">    def eat(self, food): # 实例方法 </span><br><span class="line">    	&quot;&quot;&quot;猫咪被命令吃东西&quot;&quot;&quot; </span><br><span class="line">    	self.food = food</span><br><span class="line">    	print(f&#x27;&#123;self.age&#125;岁的&#123;self.name&#125;猫 在吃&#123;self.food&#125;&#x27;)</span><br><span class="line">    	</span><br><span class="line">    	</span><br><span class="line">    	</span><br><span class="line">cat = Cat(&#x27;Jack&#x27;, 4) </span><br><span class="line"></span><br><span class="line">cat.sleep() # -如果在方法中使用self.food,会报错.因为food是在下面				#用eat方法之后才有的传参,进去被定义</span><br><span class="line"></span><br><span class="line">cat.eat(&#x27;沙拉&#x27;)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上面的案例, 创建的每一个实例对象name都叫做Tom, age 都是3岁, 这个是不满足于日常需求的,<br>通过我们创建的不同实例, 自身的属性都可以不一样, 那么, 我们的写法就得不一样</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在创建一个对象的时候, 程序会做两个动作</p>
+<ol>
+<li>在内存中为对象分配空间</li>
+<li>调用初始化方法__init__为对象初始化<br>因此, 通常也会把: 1. 创建出来的对象叫做类的实例</li>
+<li>创建对象的动作叫做实例化</li>
+<li>对象的属性叫做实例属性</li>
+<li>对象调用的方法叫做实例方法<br>在程序执行时: 1. 对象各自拥有自己的实例属性</li>
+<li>调用对象方法, 可以通过self.<br>来访问自己的属性</li>
+</ol>
+<h1 id="函数里面能定义函数吗"><a href="#函数里面能定义函数吗" class="headerlink" title="?函数里面能定义函数吗?"></a>?函数里面能定义函数吗?</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">回答:----可以</span><br></pre></td></tr></table></figure>
+
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="?注意事项?"></a>?注意事项?</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Demo(objet):</span><br><span class="line">	def __init__(self,name)</span><br><span class="line">		self.name = name</span><br><span class="line">		# name = name   是错误的,属性没有绑定对象,</span><br></pre></td></tr></table></figure>
+
+<h2 id="self"><a href="#self" class="headerlink" title="self"></a>self</h2><blockquote>
+<p>由哪一个对象的调用方法,方法内的self就是哪一个对象</p>
+<ol>
+<li>在封装方法的内部,self就表示当前调用方法的对象自己</li>
+<li>在调用方法时,程序员不需要传递self参数</li>
+<li>所谓的self,可以理解为自己</li>
+<li>某个对象调用方法时,python解释器回吧这个对象作为第一个参数传递给self,所以开发者只需要传递后面的参数即可</li>
+</ol>
+</blockquote>
+<h2 id="init"><a href="#init" class="headerlink" title="init"></a><strong>init</strong></h2><p>构造方法,初始化方法</p>
+<ol>
+<li><p>类有一个名为__init__的魔法方法,该方法在类的实例化时会自动调用</p>
+</li>
+<li><pre><code>class 类名(Object):
+    def __init__(self):
+        print(&#39;一旦实例化就会被调用&#39;)
+
+
+f = 类名()
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 在创建对象时,没有调用__init_-方法的前提下,直接把__init里面的代码输出了</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+class Cat(object):
+    &quot;&quot;&quot;模拟猫咪的尝试&quot;&quot;&quot;
+    def __init__(self, name, age):
+        self.name = name # 实例属性
+        self.age = age # 实例属性
+    def sleep(self): # 实例方法
+        &quot;&quot;&quot;猫咪被命令睡觉&quot;&quot;&quot;
+        print(&#39;%d 岁的 %s猫 正在沙发上睡懒觉&#39; % (self.age, self.name))
+    def eat(self, food): # 实例方法
+        &quot;&quot;&quot;猫咪被命令吃东西&quot;&quot;&quot;
+        self.food = food
+        print(&#39;%d 岁的 %s猫 在吃 %s&#39; % (self.age, self.name, self.food))
+
+cat = Cat(&#39;Jack&#39;, 4)
+cat.sleep()
+cat.eat(&#39;沙拉&#39;)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 在创建对象时候,程序会做两个动作</span><br><span class="line"></span><br><span class="line">   1. 在内存中为对象分配空间</span><br><span class="line">   2. 调用初始化方法init为对象初始化</span><br><span class="line"></span><br><span class="line">5. 总称</span><br><span class="line"></span><br><span class="line">   - 创建出来的对象叫做类的实例化</span><br><span class="line">   - 创建对象的动作叫做实例化</span><br><span class="line">   - 对象的属性叫做实例属性</span><br><span class="line">   - 对象调用的方法叫做实例方法</span><br><span class="line"></span><br><span class="line">6. 在程序执行时</span><br><span class="line"></span><br><span class="line">- 对象各自拥有自己的实例属性</span><br><span class="line">- 调用对象方法,可以通过self.来访问自己的属性,来调用自己的方法</span><br><span class="line"></span><br><span class="line">## str方法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ol>
+<p>class Cat(object):<br>    def <strong>init</strong>(self):<br>        print(‘初始化方法’)<br>    def <strong>str</strong>(self):<br>        print(‘1’)<br>        return ‘这是对象返回的内容’</p>
+<p>cat &#x3D; Cat()<br>print(cat)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 在python中方法名如果是__xxxx__() 的，那么就有特殊的功能，因此叫做“魔法”方法</span><br><span class="line">- 当使用print输出对象的时候，默认打印对象的内存地址。如果类定义了__str__(self) 方</span><br><span class="line">- 法，那么就会打印从在这个方法中 return 的数据</span><br><span class="line">- __str__ 方法通常返回一个字符串，作为这个对象的描述信息</span><br><span class="line"></span><br><span class="line">## del方法</span><br><span class="line"></span><br><span class="line">在对象销毁时自动使用</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>class Cat(object):<br>    def <strong>init</strong>(self):<br>    print(‘初始化方法’)<br>    def <strong>del</strong>(self):<br>    print(‘什么时候调用?’)</p>
+<p>cat &#x3D; Cat()<br>print(‘*’ * 50)</p>
+<h1 id="del-cat-加个这个会是怎样的"><a href="#del-cat-加个这个会是怎样的" class="headerlink" title="del cat 加个这个会是怎样的"></a>del cat 加个这个会是怎样的</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 此方法一般无须定义，因为Python是一门高级语言，程序员在使用时无需关心内存的分配和释</span><br><span class="line">  放，因为此工作都是交给Python解释器来执行，所以，析构函数的调用是由解释器在进行垃圾回</span><br><span class="line">  收时自动触发执行的。</span><br><span class="line">- 当有变量保存了一个对象的引用时，此对象的引用计数就会加1；</span><br><span class="line">  当使用del() 删除变量指向的对象时，则会减少对象的引用计数。如果对象的引用计数不为1，那么</span><br><span class="line">  会让这个对象的引用计数减1，当对象的引用计数为0的时候，则对象才会被真正删除（内存被回</span><br><span class="line">  收）。</span><br><span class="line"></span><br><span class="line">## 私有属性和私有方法</span><br><span class="line"></span><br><span class="line">- 之前给大家看到了, 我们可以在类外面, 直接使用对象调用实例属性, 既然可以调用, 就肯定可以修改, 但是这违反了类的封装原则, 因为对象的状态对于类外部应该是不可访问的.</span><br><span class="line">- 为了更好的保存属性安全，即不能随意修改，一般的处理方式为: 将属性定义为私有属性</span><br><span class="line">- 它是以属性命名方式来区分，如果在属性名前面加了2个下划线&#x27;__&#x27;，则表明该属性是私有属性，否则为公有属性（方法也是一样，方法名前面加了2个下划线的话表示该方法是私有的，否则为公有的）。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>class Cat(object):<br>    “””定义一个Cat类”””<br>    def <strong>init</strong>(self, name, age, color&#x3D;’白色’):<br>        self.__name &#x3D; name # 将实例属性变成私有的了<br>        self.__age &#x3D; age # 将实例属性变成私有的了<br>        self.color &#x3D; color # 公有属性<br>    def sleep(self): # 实例方法. 公有的<br>        “””猫咪被命令睡觉”””<br>        print(‘%d 岁的 %s猫 正在沙发上睡懒觉’ % 		(self.__age, self.__name))<br>    def eat(self, food): # 实例方法<br>        “””猫咪被命令吃东西”””<br>        self.food &#x3D; food<br>        print(‘%d 岁的 %s猫 在吃 %s’ % (self.__age, self.__name, self.food))<br>        def __run(self):<br>        “””猫咪被命令散步”””<br>        print(‘%d 岁的 %s猫 正在散步’ % (self.__age, self.__name))</p>
+<h1 id="实例化对象"><a href="#实例化对象" class="headerlink" title="实例化对象"></a>实例化对象</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">其实都是伪私有</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="实例化上面的类"><a href="#实例化上面的类" class="headerlink" title="实例化上面的类"></a>实例化上面的类</h1><p>cat &#x3D; cat(‘Tom’, 3)<br>print(cat._Cat__name) # 访问私有属性<br>print(cat._Cat__run) # 访问私有方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">如果就是想要访问私有属性和私有方法, 也是有办法的, 只需要在私有属性或者私有方法前面加一个下划线和类名就可以了 _类名</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 继承</span><br><span class="line"></span><br><span class="line">### 继承的定义</span><br><span class="line"></span><br><span class="line">- 继承的概念：子类 拥有 父类 的所有 方法 和 属性</span><br><span class="line">- 面向对象编程 (OOP) 语言的一个主要功能就是“继承”。继承是指这样一种能力：它可以使用现有类</span><br><span class="line">- 的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展, 实现代码的重用, 相同的</span><br><span class="line">- 代码不需要重复的编写(可以提高开发的效率)</span><br><span class="line">- 通过继承创建的新类称为“子类”或“派生类”。</span><br><span class="line">- 被继承的类称为“基类”、“父类”或“超类”。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>class Father(object):<br>    def <strong>init</strong>(self, name&#x3D;’马云’, age&#x3D;50):<br>        self.__name &#x3D; name # 私有属性<br>        self.age &#x3D; age # 公有属性<br>    def __test(self): # 私有方法<br>        print(self.__name) # 打印私有属性<br>        print(self.age)<br>    def test(self):<br>        print(self.__name) # 打印私有属性<br>        print(self.age)<br>class Son(Father):<br>    def demo1(self):<br>        # print(self.__name) #不能访问到父类的私有属性<br>        print(self.age)<br>    def demo2(self):<br>        # self.__test() #不能访问父类中的私有方法<br>        self.test()</p>
+<p>ft &#x3D; Father()</p>
+<h1 id="print-ft-name-程序出现异常，不能访问私有属性"><a href="#print-ft-name-程序出现异常，不能访问私有属性" class="headerlink" title="print(ft.__name) #程序出现异常，不能访问私有属性"></a>print(ft.__name) #程序出现异常，不能访问私有属性</h1><p>print(ft.age)</p>
+<h1 id="ft-test-程序出现异常，不能访问私有方法"><a href="#ft-test-程序出现异常，不能访问私有方法" class="headerlink" title="ft.__test() #程序出现异常，不能访问私有方法"></a>ft.__test() #程序出现异常，不能访问私有方法</h1><p>ft.test()<br>print(“——分割线—–”)<br>son &#x3D; Son(name&#x3D;”小张”, age&#x3D;18)<br>son.demo1()<br>son.demo2()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">私有的属性，不能通过对象直接访问，但是可以通过方法访问</span><br><span class="line">私有的方法，不能通过对象直接访问，但是可以通过方法访问</span><br><span class="line">私有的属性、方法，不会被子类继承，也不能被访问</span><br><span class="line">一般情况下，私有的属性、方法都是不对外公布的，往往用来做内部的事情，起到安全的作用</span><br><span class="line"></span><br><span class="line">### 多继承</span><br><span class="line"></span><br><span class="line">子类可以拥有多个父类,并且具有所有父类的属性和方法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>class Children(Father, Son):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Python 中的 mro —— 方法搜索顺序</span><br><span class="line">Python 中针对 类 提供了一个 内置属性 __mro__ 可以查看 方法 搜索顺序</span><br><span class="line">mro 是 method resolution order ，主要用于 在多继承时判断 方法、属性 的调用</span><br><span class="line">路径</span><br><span class="line">在搜索方法时，是按照 __mro__ 的输出结果 从左至右 的顺序查找的</span><br><span class="line">如果在当前类中 找到方法，就直接执行，不再搜索</span><br><span class="line">如果 没有找到，就查找下一个类 中是否有对应的方法，如果找到，就直接执行，不再搜索</span><br><span class="line">如果找到最后一个类，还没有找到方法，程序报错</span><br><span class="line">提示：开发时，应该尽量避免这种容易产生混淆的情况！ —— 如果 父类之间 存在 同名的属性或</span><br><span class="line">者方法，应该 尽量避免 使用多继承</span><br><span class="line"></span><br><span class="line">### 重写父类</span><br><span class="line"></span><br><span class="line">当 父类 的方法实现不能满足子类需求时，可以对方法进行 重写</span><br><span class="line">所谓 重写，就是子类中，有一个和父类相同名字的方法，在子类中的方法会覆盖掉父类中同名的</span><br><span class="line">方法</span><br><span class="line"></span><br><span class="line">- 覆盖 父类的方法</span><br><span class="line">  具体的实现方式，就相当于在 子类中 定义了一个 和父类同名的方法并且实现, 直接写想实现</span><br><span class="line">  功能的代码</span><br><span class="line">- 对父类方法进行 扩展</span><br><span class="line">- 在需要的位置使用 super().父类方法 来调用父类方法的执行( 或者父类名().父类方法, 不推</span><br><span class="line">  荐 )</span><br><span class="line">  代码其他的位置针对子类的需求，编写 子类特有的代码实现</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>class A(object):<br>    def test(self):<br>    print(‘原有的功能代码’)<br>class B(A):<br>    def test(self):<br>    super().test() # 扩展型重写<br>    print(‘新的功能代码’)</p>
+<p>b &#x3D; B()<br>b.test()</p>
+<pre><code>
+</code></pre>
+
+      </div>
+      <div class="post-tags-categories">
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>云昔子</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/post/ff06.html" target="_blank" title="python进阶笔记">http://example.com/post/ff06.html</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/14.jpg" class="lazyload placeholder" data-srcset="/medias/14.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/post/d9de.html" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">python函数总结</div>
+      </div>
+      
+      <!-- <div class="content">
+        目录[TOC]
+函数函数—(具备某一功能的工具)
+#先定义,再调用
+.定义123456def 函数名(参数1,参数2,.
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/8.jpg" class="lazyload placeholder" data-srcset="/medias/8.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+    </div>
+    <a href="/post/f21e.html" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">java基础</div>
+      </div>
+      <!-- <div class="content">
+        java基础学习笔记$$‘’欲练此功,拔刀自宫[狗头]’’$$
+目录[TOC]
+java使用cmd常用使用1234567
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="/medias/2.jpg" class="lazyload placeholder" data-srcset="/medias/2.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      
+<section id="comments" style="padding: 1em;"
+	class="animated bounceInUp">
+	<div id="vcomment" class="comment"></div>
+</section>
+<style>
+	#comments {
+		background: rgba(255,255,255,0.9);
+	}
+	#veditor {
+		background-image: url('https://img.zcool.cn/community/01a253594c71cfa8012193a329a77f.gif');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: rgba(255, 255, 255, 0);
+		resize: vertical;
+	}
+	#veditor:focus{
+		background-position-y: 200px;
+		transition: all 0.2s ease-in-out 0s;
+	}
+	#vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
+		background-color: #42b983;
+	}
+	.v[data-class=v] .vbtn:active, .v[data-class=v] .vbtn:hover {
+		color: #42b983;
+		border-color: #42b983;
+	}
+	#vcomment .vcards .vcard .vhead .vsys i {
+		display: none;
+	}
+	/* 底部valine链接 */
+	#vcomment .vpower {
+		display: none;
+	}
+	
+	/* 底下注释是修改 名称和邮箱和网址输入框的样式 */
+	/* #vcomment .vheader {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	#vcomment .vheader .vnick {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vmail {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vlink {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	} */
+
+	img.vimg {
+		transition: all 1s;
+		/* 头像旋转时间为 1s */
+	}
+
+	img.vimg:hover {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+	}
+
+	#vcomment .vcards .vcard {
+		padding: 15px 20px 0 20px;
+		border-radius: 10px;
+		margin-bottom: 15px;
+		box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+		transition: all .3s
+	}
+
+	#vcomment .vcards .vcard:hover {
+		box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+	}
+
+	#vcomment .vcards .vcard .vh .vcard {
+		border: none;
+		box-shadow: none;
+	}
+</style>
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        
+          <div class="toc-open-close">本文目录</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端目录按钮 -->
+  <div id="toc-mobile-btn">
+    <i class="fas fa-list-ul" aria-hidden="true"></i>
+  </div>
+
+
+<script>
+  function closeToc(init) {
+    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
+    $(".toc-content").css({'width': 0});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+    $(".main-content").css({'width': '75%', 'margin-left': 'auto', 'margin-right': 'auto',});
+  };
+  function openToc() {
+    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
+    $(".toc-content").css({'width': '300px'});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+  }
+  function openBtnClickFn () {
+    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+    let open = eval('' || 'true');
+    openOrCloseBtn.click(function() {
+      if (open) {
+        closeToc();
+        open = false;
+      } else {
+        openToc();
+        open = true;
+      }
+    });
+  };
+  openBtnClickFn();
+  initCloseTocWidth(true);
+
+  function initCloseTocWidth(init) {
+    if (window.innerWidth >= 992) {
+      let isClose = false;
+      isClose && closeToc(init)
+    }
+  }
+
+  document.addEventListener('pjax:complete', function () {
+    $(".toc-aside").css({'transition': 'no'});
+  })
+  document.addEventListener('pjax:complete', function () {
+    openBtnClickFn();
+  })
+  
+</script>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
 
       </main>
     </div>

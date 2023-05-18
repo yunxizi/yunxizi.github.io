@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>归档: 2023/5 | 云昔子</title>
+  <title>爬虫总结 | 云昔子</title>
 
   <link rel="icon" type="image/png" href="/logo1.png">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -639,106 +639,800 @@
     
 </header>
         <!-- 内容区域 -->
-        <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
-<div class="archive-header" style="background-image:url('https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c')">
-  <div class="archive-header-title">
-    archive
-  </div>
-  <div class="archive-header-desc">
-  
-  <span class="title" id="archive-header-desc"></span>
-  <script>
-  function typedFn() {
-    const el = '#archive-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-  
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<div class="archive-video">
-  <video class="full-video" autoplay loop muted>
-      <source style="width: 100%;height: 100vh;" src="/">
-  </video>
-  <div class="video-header-title">
-    archive
-  </div>
-  <div class="video-header-desc">
-  
-      <span class="title" id="archive-video-header-desc"></span>
-      <script>
-  function typedFn() {
-    const el = '#archive-video-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-      
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<!-- hash算法 -->
-
-
-<div class="archive-main">
-  <section class="archive">
-    <div class="archive-content">
-      <ul class="post-archive">
         
-        
-          
-            
-            <div class="year" data-aos="zoom-in-up">
-                <div class="bullet"></div>
-                <a href="/archives/2023">2023</a>
-            </div>
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/post/0.html" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">05-18</span>
-              </div>
-              <a class="post-title" href="/post/0.html"></a>
-            </div>
-          </li>
-        
-      </ul>
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/medias/7.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        爬虫总结
+      </span>
     </div>
-  </section>
-  <div class="w-70">
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2023-01-28 |
+        </span>
+      
+
+      
+
+      
     
   </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
 </div>
+
+
+
+
+
+<div class="post-detail-content row justify-position" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <h1 id="爬虫学习"><a href="#爬虫学习" class="headerlink" title="爬虫学习"></a><strong>爬虫学习</strong></h1><h2 id="1-爬虫是什么"><a href="#1-爬虫是什么" class="headerlink" title="1. 爬虫是什么"></a>1. 爬虫是什么</h2><h2 id="2-爬虫分类"><a href="#2-爬虫分类" class="headerlink" title="2. 爬虫分类"></a>2. 爬虫分类</h2><ol>
+<li>通用爬虫</li>
+</ol>
+<p> 抓取系统重要组成部分, 抓取的是一个页面的所有数据</p>
+<ol start="2">
+<li>聚集爬虫</li>
+</ol>
+<p> 建立在通用爬虫的基础之上, 抓取的是页面中特定的数据</p>
+<ol start="3">
+<li>增量式爬虫</li>
+</ol>
+<p>检测网站中数据更新的情况, 只会抓取网站中更新出来的数据</p>
+<h2 id="3-爬虫的步骤"><a href="#3-爬虫的步骤" class="headerlink" title="3.爬虫的步骤"></a>3.爬虫的步骤</h2><ol>
+<li><p>指定url发送请求</p>
+</li>
+<li><p>获取响应结果</p>
+</li>
+<li><p>解析数据</p>
+</li>
+<li><p>保存数据</p>
+</li>
+</ol>
+<h2 id="4-反爬-反反爬"><a href="#4-反爬-反反爬" class="headerlink" title="4.反爬- 反反爬"></a>4.反爬- 反反爬</h2><ol>
+<li><p>UA</p>
+</li>
+<li><p>cookie</p>
+</li>
+<li><p>验证码(超级鹰)(免费的平台)</p>
+</li>
+<li><p>防盗链(referer)</p>
+</li>
+<li><p>代理</p>
+</li>
+<li><p>时间 sleep()</p>
+</li>
+<li><p>requests</p>
+</li>
+</ol>
+<h2 id="5-使用操作"><a href="#5-使用操作" class="headerlink" title="5.使用操作"></a>5.使用操作</h2><ul>
+<li>静态数据, xpath</li>
+<li>动态数据, json</li>
+<li>爬虫学习知识点</li>
+<li>爬数据</li>
+<li>反反爬</li>
+<li>请求头–&gt;UA</li>
+<li>验证码</li>
+<li>IP</li>
+<li>selenium等</li>
+<li>异步 线程</li>
+<li>框架</li>
+<li>Js逆向</li>
+</ul>
+<h1 id="requests模块"><a href="#requests模块" class="headerlink" title="requests模块"></a>requests<strong>模块</strong></h1><p><strong>pip install requests(第三方扩展包)</strong></p>
+<p><strong>response.content: 字符串</strong></p>
+<p><strong>response.content.decode(): 二进制</strong></p>
+<p><strong>字符串&#x3D;&#x3D;&gt;二进制   str.encode()</strong></p>
+<p><strong>二进制&#x3D;&#x3D;&gt;字符串   bytes.decode()</strong></p>
+<p><strong>response.content.decode(‘utf-8’)</strong></p>
+<p><strong>response.text是猜测来解码</strong></p>
+<p><strong>response.content.decode()可以根据自己设置来解码</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 对指定的url发送请求</span></span><br><span class="line">url = <span class="string">&quot;https://www.baidu.com/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64)</span></span><br><span class="line"><span class="string">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">response = requests.get(url, headers=headers)</span><br><span class="line"><span class="comment"># 2. 获取响应的数据</span></span><br><span class="line">text = response.text</span><br><span class="line">text = response.content.decode()</span><br><span class="line"><span class="comment"># 3. 解析数据(筛选数据, 提取数据)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 保存数据</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;百度.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">f.write(text)</span><br></pre></td></tr></table></figure>
+
+<h1 id="xpath表达式"><a href="#xpath表达式" class="headerlink" title="xpath表达式"></a>xpath表达式</h1><p>如果想提取数据, 可以通过xpath, 但是<strong>得将源代码转换成xml格式</strong>, 转换完了, 就可以通过xpath表</p>
+<p>达式来写</p>
+<p><strong>pip install lxml(如果有红色波浪线没问题)</strong></p>
+<table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#x2F;</td>
+<td>从根节点选取</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;</td>
+<td>从匹配选择的当前节点选择文档的节点,而不考虑他们的位置</td>
+</tr>
+<tr>
+<td>.</td>
+<td>选择当前节点</td>
+</tr>
+<tr>
+<td>..</td>
+<td>选择当前节点的父节点</td>
+</tr>
+<tr>
+<td>@</td>
+<td>选取属性,例如:&#x2F;&#x2F;div[@class&#x3D;”bule”]</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;div[1]</td>
+<td>选择div的第一个</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;div[last()]</td>
+<td>选择最后一个div</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;div[last()-1]</td>
+<td>选择倒数第二个</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;div[position&lt;3]</td>
+<td>选择前两个div</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;div[@class&#x3D;”box”]</td>
+<td>选择class属性值为box的标签</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;div[@price&gt;20]</td>
+<td>选择price属性值大与20的标签</td>
+</tr>
+<tr>
+<td>*</td>
+<td>通配符</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;div|&#x2F;&#x2F;span</td>
+<td>所有的div和span标签</td>
+</tr>
+<tr>
+<td>div[contains(@class,’swiper-slide’)]</td>
+<td>div里面class内容里包含,’swiper-slide’</td>
+</tr>
+<tr>
+<td>&#x2F;img&#x2F;@src</td>
+<td>获取img标签内src的属性值</td>
+</tr>
+<tr>
+<td>&#x2F;div&#x2F;text()</td>
+<td>获取div标签下text文本</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="pyquery"><a href="#pyquery" class="headerlink" title="pyquery"></a><strong>pyquery</strong></h1><p>同xpath, 能够<strong>将源代码转换成pyquery对象,</strong> 然后再通过<strong>类jquery</strong>选择器来获取内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyquery</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyquery <span class="keyword">import</span> PyQuery <span class="keyword">as</span> pq</span><br><span class="line"></span><br><span class="line">html = <span class="string">&quot;xxx&quot;</span> <span class="comment"># 前端代码</span></span><br><span class="line"></span><br><span class="line">doc = pq(html) <span class="comment"># 转换成pyquery数据</span></span><br><span class="line"></span><br><span class="line">result = doc(<span class="string">&quot;选择方法&quot;</span>) <span class="comment"># 使用选择方法提取数据</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>doc(‘xxx’)</td>
+<td>里面写jquery语法</td>
+</tr>
+<tr>
+<td>doc.find(‘li’)</td>
+<td>doc里面所有的li标签</td>
+</tr>
+<tr>
+<td>doc.children(‘li’)</td>
+<td>doc里面所有儿子节点li</td>
+</tr>
+<tr>
+<td>doc.parent()</td>
+<td>doc的父亲节点</td>
+</tr>
+<tr>
+<td>doc.parents</td>
+<td>doc的所有祖宗节点</td>
+</tr>
+<tr>
+<td>doc.sliblings</td>
+<td>所有兄弟节点</td>
+</tr>
+<tr>
+<td>attr(‘href’)或者a.attr.href</td>
+<td>获取属性</td>
+</tr>
+<tr>
+<td>a.text()</td>
+<td>获取文本</td>
+</tr>
+<tr>
+<td>a.html()</td>
+<td>获取a里面所有</td>
+</tr>
+</tbody></table>
+<h1 id="正则"><a href="#正则" class="headerlink" title="正则"></a><strong>正则</strong></h1><ul>
+<li>同以上两种方法, <strong>另外两种方法是将源代码转换成另外的数据类型然后再通过自身的语法来提取</strong></li>
+<li>正则, 直接针对字符串来提取内容</li>
+<li>xpath, pyquery针对结构化的数据非常好用, 但是如果结构混乱则不好用</li>
+<li>re针对任何样式的数据都能够用, 但是不管针对任何样式也都比较麻烦</li>
+<li>总结**: 能够使用xpath则会使用它, 除非用不了, 再用re**</li>
+</ul>
+<p><strong>内置模块, 不需要安装</strong></p>
+<ul>
+<li><p><strong>re.match</strong>(‘表达式’, 提取源内容)</p>
+<p>从源内容的<strong>头部内容开始</strong>, 根据表达式的规则来找</p>
+<p>正则类型, <strong>只能得到一个</strong>, 通过group()得到最终数据</p>
+</li>
+<li><p><strong>re.search</strong>(‘表达式’, 提取源内容)</p>
+<p>源内容的<strong>任何地方</strong>, 都可以根据表达式的规则来找</p>
+<p>正则类型, <strong>只能得到一个,</strong> 通过group()得到最终数据</p>
+</li>
+<li><p><strong>re.fifindall</strong>(‘表达式’, 提取源内容)</p>
+<p>源内容的<strong>任何地方</strong>, 都可以根据表达式的规则来找</p>
+<p>列表, <strong>所有匹配到的都拿出来</strong></p>
+</li>
+</ul>
+<h2 id="re模块"><a href="#re模块" class="headerlink" title="re模块"></a>re模块</h2><blockquote>
+<ol>
+<li>‘\d’匹配0-9之间的数值</li>
+<li>‘+’重复前一个匹配字符一个或者多个匹配字符</li>
+<li>‘*’重复前一个匹配字符零次或者多次</li>
+<li>‘?’重复前一个匹配字符零次或者一次</li>
+<li>‘.’代表任何一个字符,并未声明不代表字符’\n’</li>
+<li>‘ | ‘代表把左右分为两个部分,要么是….要么是…..</li>
+<li>特殊符号使用反斜线 ‘ \ ‘引导,例如 ‘ \r’,’ \n ‘,’\t’</li>
+<li>“[ ]”中的字符任选择一个 :列如[0-9],[A-Z][a-z]</li>
+<li>‘\b’表示单词结尾,包括空白字符或字符串结尾</li>
+<li>“ ^ “出现在 [ ] 第一个字符串前面,代表取反,列如: ‘[^0-9 ]’</li>
+<li>‘\s’匹配任何字符串,等价于”[\r  \n  \x20  \t  \f  \v]”</li>
+<li>‘w’匹配包括下划线子内单词字符,等价于’[0-9 A-Z a-z]’</li>
+<li>‘$’字符匹配字符串结尾位置</li>
+<li>使用’(   )’把里面看作一个整体</li>
+</ol>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">s = <span class="string">&#x27;zhang li xun&#x27;</span> </span><br><span class="line">reg = <span class="string">r&#x27;w+ \b&#x27;</span>  <span class="comment">#正则公式</span></span><br><span class="line">m = re.search(reg,s)</span><br><span class="line"><span class="keyword">while</span> m!= <span class="literal">None</span>:</span><br><span class="line">	start = m.star() <span class="comment"># 拿到的字符开始位置是那个字符</span></span><br><span class="line">	end = m.end()  <span class="comment"># 拿到的字符结尾位置是那个字符</span></span><br><span class="line">	<span class="built_in">print</span>(s[start:end])</span><br><span class="line">	s=s[end:]</span><br><span class="line">	m = re.search(reg,s)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/image-20230329151930704.png" class="lazyload placeholder" data-srcset="/image-20230329151930704.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20230329151930704"></p>
+
+      </div>
+      <div class="post-tags-categories">
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>云昔子</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/post/74fe.html" target="_blank" title="爬虫总结">http://example.com/post/74fe.html</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/12.jpg" class="lazyload placeholder" data-srcset="/medias/12.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/post/d8f4.html" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">C++学习记录</div>
+      </div>
+      
+      <!-- <div class="content">
+        C++基础语法C++文件后缀为.cpp
+12345#include &lt;iostream&gt;int main()
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/15.jpg" class="lazyload placeholder" data-srcset="/medias/15.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+    </div>
+    <a href="/post/a2.html" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">LeetCode刷题</div>
+      </div>
+      <!-- <div class="content">
+        
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="/medias/2.jpg" class="lazyload placeholder" data-srcset="/medias/2.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      
+<section id="comments" style="padding: 1em;"
+	class="animated bounceInUp">
+	<div id="vcomment" class="comment"></div>
+</section>
+<style>
+	#comments {
+		background: rgba(255,255,255,0.9);
+	}
+	#veditor {
+		background-image: url('https://img.zcool.cn/community/01a253594c71cfa8012193a329a77f.gif');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: rgba(255, 255, 255, 0);
+		resize: vertical;
+	}
+	#veditor:focus{
+		background-position-y: 200px;
+		transition: all 0.2s ease-in-out 0s;
+	}
+	#vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
+		background-color: #42b983;
+	}
+	.v[data-class=v] .vbtn:active, .v[data-class=v] .vbtn:hover {
+		color: #42b983;
+		border-color: #42b983;
+	}
+	#vcomment .vcards .vcard .vhead .vsys i {
+		display: none;
+	}
+	/* 底部valine链接 */
+	#vcomment .vpower {
+		display: none;
+	}
+	
+	/* 底下注释是修改 名称和邮箱和网址输入框的样式 */
+	/* #vcomment .vheader {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	#vcomment .vheader .vnick {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vmail {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vlink {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	} */
+
+	img.vimg {
+		transition: all 1s;
+		/* 头像旋转时间为 1s */
+	}
+
+	img.vimg:hover {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+	}
+
+	#vcomment .vcards .vcard {
+		padding: 15px 20px 0 20px;
+		border-radius: 10px;
+		margin-bottom: 15px;
+		box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+		transition: all .3s
+	}
+
+	#vcomment .vcards .vcard:hover {
+		box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+	}
+
+	#vcomment .vcards .vcard .vh .vcard {
+		border: none;
+		box-shadow: none;
+	}
+</style>
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        
+          <div class="toc-open-close">本文目录</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端目录按钮 -->
+  <div id="toc-mobile-btn">
+    <i class="fas fa-list-ul" aria-hidden="true"></i>
+  </div>
+
+
+<script>
+  function closeToc(init) {
+    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
+    $(".toc-content").css({'width': 0});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+    $(".main-content").css({'width': '75%', 'margin-left': 'auto', 'margin-right': 'auto',});
+  };
+  function openToc() {
+    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
+    $(".toc-content").css({'width': '300px'});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+  }
+  function openBtnClickFn () {
+    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+    let open = eval('' || 'true');
+    openOrCloseBtn.click(function() {
+      if (open) {
+        closeToc();
+        open = false;
+      } else {
+        openToc();
+        open = true;
+      }
+    });
+  };
+  openBtnClickFn();
+  initCloseTocWidth(true);
+
+  function initCloseTocWidth(init) {
+    if (window.innerWidth >= 992) {
+      let isClose = false;
+      isClose && closeToc(init)
+    }
+  }
+
+  document.addEventListener('pjax:complete', function () {
+    $(".toc-aside").css({'transition': 'no'});
+  })
+  document.addEventListener('pjax:complete', function () {
+    openBtnClickFn();
+  })
+  
+</script>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
 
       </main>
     </div>
