@@ -691,15 +691,12 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h1><p>(1**)SQL SELECT 语句**</p>
-<p>SELECT 语句用于从数据库中选取数据。</p>
+        <h1 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h1><h2 id="1-SQL-SELECT-语句"><a href="#1-SQL-SELECT-语句" class="headerlink" title="(1**)SQL SELECT 语句**"></a>(1**)SQL SELECT 语句**</h2><p>SELECT 语句用于从数据库中选取数据。</p>
 <p>结果被存储在一个结果表中，称为结果集。</p>
-<p>(2)<strong>SQL SELECT DISTINCT 语句</strong></p>
-<p>在表中，一个列可能会包含多个重复值，有时您也许希望仅仅列出不同（distinct）的值。</p>
+<h2 id="2-SQL-SELECT-DISTINCT-语句"><a href="#2-SQL-SELECT-DISTINCT-语句" class="headerlink" title="(2)SQL SELECT DISTINCT 语句"></a>(2)<strong>SQL SELECT DISTINCT 语句</strong></h2><p>在表中，一个列可能会包含多个重复值，有时您也许希望仅仅列出不同（distinct）的值。</p>
 <p>DISTINCT 关键词用于返回唯一不同的值。</p>
 <p><strong>也就是去除重复值</strong></p>
-<p>(3)SQL WHERE 子句</p>
-<p>WHERE 子句用于提取那些满足指定条件的记录。</p>
+<h2 id="3-SQL-WHERE-子句"><a href="#3-SQL-WHERE-子句" class="headerlink" title="(3)SQL WHERE 子句"></a>(3)SQL WHERE 子句</h2><p>WHERE 子句用于提取那些满足指定条件的记录。</p>
 <p>下面的运算符可以在 WHERE 子句中使用：</p>
 <table>
 <thead>
@@ -772,18 +769,15 @@
 </ul>
 </li>
 </ul>
-<p>(4)<strong>SQL AND &amp; OR 运算符</strong></p>
-<p>如果第一个条件和第二个条件都成立，则 AND 运算符显示一条记录。</p>
+<h2 id="4-SQL-AND-amp-OR-运算符"><a href="#4-SQL-AND-amp-OR-运算符" class="headerlink" title="(4)SQL AND &amp; OR 运算符"></a>(4)<strong>SQL AND &amp; OR 运算符</strong></h2><p>如果第一个条件和第二个条件都成立，则 AND 运算符显示一条记录。</p>
 <p>如果第一个条件和第二个条件中只要有一个成立，则 OR 运算符显示一条记录。</p>
-<p>(5)<strong>SQL ORDER BY 关键字</strong></p>
-<p>ORDER BY 关键字用于对结果集按照一个列或者多个列进行排序。</p>
+<h2 id="5-SQL-ORDER-BY-关键字"><a href="#5-SQL-ORDER-BY-关键字" class="headerlink" title="(5)SQL ORDER BY 关键字"></a>(5)<strong>SQL ORDER BY 关键字</strong></h2><p>ORDER BY 关键字用于对结果集按照一个列或者多个列进行排序。</p>
 <p>ORDER BY 关键字默认按照升序对记录进行排序。如果需要按照降序对记录进行排序，您可以使用 DESC 关键字。</p>
 <ul>
 <li><strong>ASC</strong>：表示按升序排序。</li>
 <li><strong>DESC</strong>：表示按降序排序。</li>
 </ul>
-<p>(6)<strong>SQL INSERT INTO 语句</strong></p>
-<p>INSERT INTO 语句用于向表中插入新记录。</p>
+<h2 id="6-SQL-INSERT-INTO-语句"><a href="#6-SQL-INSERT-INTO-语句" class="headerlink" title="(6)SQL INSERT INTO 语句"></a>(6)<strong>SQL INSERT INTO 语句</strong></h2><p>INSERT INTO 语句用于向表中插入新记录。</p>
 <p>SQL INSERT INTO 语法</p>
 <p>INSERT INTO 语句可以有两种编写形式。</p>
 <p>第一种形式无需指定要插入数据的列名，只需提供被插入的值即可：</p>
@@ -792,12 +786,10 @@
 <p>第二种形式需要指定列名及被插入的值：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO table_name (column1,column2,column3,...)</span><br><span class="line">VALUES (value1,value2,value3,...);</span><br></pre></td></tr></table></figure>
 
-<p>(7)<strong>SQL UPDATE 语句</strong></p>
-<p>UPDATE 语句用于更新表中已存在的记录。</p>
+<h2 id="7-SQL-UPDATE-语句"><a href="#7-SQL-UPDATE-语句" class="headerlink" title="(7)SQL UPDATE 语句"></a>(7)<strong>SQL UPDATE 语句</strong></h2><p>UPDATE 语句用于更新表中已存在的记录。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE table_name</span><br><span class="line">SET column1 = value1, column2 = value2, ...</span><br><span class="line">WHERE condition;</span><br></pre></td></tr></table></figure>
 
-<p>(8)<strong>SQL DELETE 语句</strong></p>
-<p>DELETE 语句用于删除表中的行。</p>
+<h2 id="8-SQL-DELETE-语句"><a href="#8-SQL-DELETE-语句" class="headerlink" title="(8)SQL DELETE 语句"></a>(8)<strong>SQL DELETE 语句</strong></h2><p>DELETE 语句用于删除表中的行。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM table_name</span><br><span class="line">WHERE condition;</span><br></pre></td></tr></table></figure>
 
 <hr>
@@ -845,11 +837,59 @@
 <li>相同点：均在WHERE中使用作为筛选条件之一、均是等于的含义</li>
 <li>不同点：IN可以规定多个值，等于规定一个值</li>
 </ul>
-<h2 id="SQL-ETWEEN-操作符"><a href="#SQL-ETWEEN-操作符" class="headerlink" title="SQL ETWEEN 操作符"></a>SQL ETWEEN 操作符</h2><hr>
+<h2 id="5-SQL-BETWEEN-操作符"><a href="#5-SQL-BETWEEN-操作符" class="headerlink" title="(5)SQL BETWEEN 操作符"></a>(5)SQL BETWEEN 操作符</h2><hr>
 <p>BETWEEN 操作符用于选取介于两个值之间的数据范围内的值。</p>
 <hr>
 <h3 id="SQL-BETWEEN-操作符"><a href="#SQL-BETWEEN-操作符" class="headerlink" title="SQL BETWEEN 操作符"></a>SQL BETWEEN 操作符</h3><p>BETWEEN 操作符选取介于两个值之间的数据范围内的值。这些值可以是数值、文本或者日期。</p>
 <h3 id="SQL-BETWEEN-语法"><a href="#SQL-BETWEEN-语法" class="headerlink" title="SQL BETWEEN 语法"></a>SQL BETWEEN 语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT column1, column2, ...</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE column BETWEEN value1 AND value2;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-SQL-别名"><a href="#6-SQL-别名" class="headerlink" title="(6)SQL 别名"></a>(6)SQL 别名</h2><hr>
+<p>通过使用 SQL，可以为表名称或列名称指定别名。</p>
+<hr>
+<h3 id="SQL-别名"><a href="#SQL-别名" class="headerlink" title="SQL 别名"></a>SQL 别名</h3><p>通过使用 SQL，可以为表名称或列名称指定别名。</p>
+<p>基本上，创建别名是为了让列名称的可读性更强。 </p>
+<h3 id="列的-SQL-别名语法"><a href="#列的-SQL-别名语法" class="headerlink" title="列的 SQL 别名语法"></a>列的 SQL 别名语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name AS alias_name</span><br><span class="line">FROM table_name;</span><br></pre></td></tr></table></figure>
+
+<h3 id="表的-SQL-别名语法"><a href="#表的-SQL-别名语法" class="headerlink" title="表的 SQL 别名语法"></a>表的 SQL 别名语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s)</span><br><span class="line">FROM table_name AS alias_name;</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/wp-content/uploads/2019/01/sql-join.png">https://www.runoob.com/wp-content/uploads/2019/01/sql-join.png</a></p>
+<h2 id="7-SQL-JOIN"><a href="#7-SQL-JOIN" class="headerlink" title="(7)SQL JOIN"></a>(7)SQL JOIN</h2><p>SQL JOIN 子句用于把来自两个或多个表的行结合起来，基于这些表之间的共同字段。</p>
+<p>最常见的 JOIN 类型：<strong>SQL INNER JOIN（简单的 JOIN）</strong>。 SQL INNER JOIN 从多个表中返回满足 JOIN 条件的所有行。</p>
+<p>LEFT JOIN、RIGHT JOIN、INNER JOIN、OUTER JOIN 相关的 7 种用法。</p>
+<h3 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT column1, column2, ...</span><br><span class="line">FROM table1</span><br><span class="line">JOIN table2 ON condition;</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数说明：</strong></p>
+<ul>
+<li>**column1, column2, …**：要选择的字段名称，可以为多个字段。如果不指定字段名称，则会选择所有字段。</li>
+<li><strong>table1</strong>：要连接的第一个表。</li>
+<li><strong>table2</strong>：要连接的第二个表。</li>
+<li><strong>condition</strong>：连接条件，用于指定连接方式</li>
+</ul>
+<h2 id="SQL-INNER-JOIN-关键字"><a href="#SQL-INNER-JOIN-关键字" class="headerlink" title="SQL INNER JOIN 关键字"></a>SQL INNER JOIN 关键字</h2><p>INNER JOIN 关键字在表中存在至少一个匹配时返回行。</p>
+<h3 id="SQL-INNER-JOIN-语法"><a href="#SQL-INNER-JOIN-语法" class="headerlink" title="SQL INNER JOIN 语法"></a>SQL INNER JOIN 语法</h3><p>SELECT <em>column_name(s)</em><br>FROM <em>table1</em><br>INNER JOIN <em>table2</em><br>ON <em>table1.column_name</em>&#x3D;<em>table2.column_name</em>;</p>
+<p>或：</p>
+<p>SELECT <em>column_name(s)</em><br>FROM <em>table1</em><br>JOIN <em>table2</em><br>ON <em>table1.column_name</em>&#x3D;<em>table2.column_name</em>;</p>
+<h2 id="SQL-LEFT-JOIN-关键字"><a href="#SQL-LEFT-JOIN-关键字" class="headerlink" title="SQL LEFT JOIN 关键字"></a>SQL LEFT JOIN 关键字</h2><p>LEFT JOIN 关键字从左表（table1）返回所有的行，即使右表（table2）中没有匹配。如果右表中没有匹配，则结果为 NULL。</p>
+<h3 id="SQL-LEFT-JOIN-语法"><a href="#SQL-LEFT-JOIN-语法" class="headerlink" title="SQL LEFT JOIN 语法"></a>SQL LEFT JOIN 语法</h3><p>SELECT <em>column_name(s)</em><br>FROM <em>table1</em><br>LEFT JOIN <em>table2</em><br>ON <em>table1.column_name</em>&#x3D;<em>table2.column_name</em>;</p>
+<p>或：</p>
+<p>SELECT <em>column_name(s)</em><br>FROM <em>table1</em><br>LEFT OUTER JOIN <em>table2</em><br>ON <em>table1.column_name</em>&#x3D;<em>table2.column_name</em>;</p>
+<h2 id="SQL-RIGHT-JOIN-关键字"><a href="#SQL-RIGHT-JOIN-关键字" class="headerlink" title="SQL RIGHT JOIN 关键字"></a>SQL RIGHT JOIN 关键字</h2><p>RIGHT JOIN 关键字从右表（table2）返回所有的行，即使左表（table1）中没有匹配。如果左表中没有匹配，则结果为 NULL。</p>
+<h3 id="SQL-RIGHT-JOIN-语法"><a href="#SQL-RIGHT-JOIN-语法" class="headerlink" title="SQL RIGHT JOIN 语法"></a>SQL RIGHT JOIN 语法</h3><p>SELECT <em>column_name(s)</em><br>FROM <em>table1</em><br>RIGHT JOIN <em>table2</em><br>ON <em>table1.column_name</em>&#x3D;<em>table2.column_name</em>;</p>
+<p>或：</p>
+<p>SELECT <em>column_name(s)</em><br>FROM <em>table1</em><br>RIGHT OUTER JOIN <em>table2</em><br>ON <em>table1.column_name</em>&#x3D;<em>table2.column_name</em>;</p>
+<p><strong>注释：</strong>在某些数据库中，RIGHT JOIN 称为 RIGHT OUTER JOIN。</p>
+<h2 id="SQL-FULL-OUTER-JOIN-关键字"><a href="#SQL-FULL-OUTER-JOIN-关键字" class="headerlink" title="SQL FULL OUTER JOIN 关键字"></a>SQL FULL OUTER JOIN 关键字</h2><p>FULL OUTER JOIN 关键字只要左表（table1）和右表（table2）其中一个表中存在匹配，则返回行.</p>
+<p>FULL OUTER JOIN 关键字结合了 LEFT JOIN 和 RIGHT JOIN 的结果。</p>
+<h3 id="SQL-FULL-OUTER-JOIN-语法"><a href="#SQL-FULL-OUTER-JOIN-语法" class="headerlink" title="SQL FULL OUTER JOIN 语法"></a>SQL FULL OUTER JOIN 语法</h3><p>SELECT <em>column_name(s)</em><br>FROM <em>table1</em><br>FULL OUTER JOIN <em>table2</em><br>ON <em>table1.column_name</em>&#x3D;<em>table2.column_name</em>;</p>
+<h2 id="8-SQL-UNION-操作符"><a href="#8-SQL-UNION-操作符" class="headerlink" title="(8)SQL UNION 操作符"></a>(8)SQL UNION 操作符</h2><hr>
+<p>SQL UNION 操作符合并两个或多个 SELECT 语句的结果。</p>
+<hr>
+<h3 id="SQL-UNION-操作符"><a href="#SQL-UNION-操作符" class="headerlink" title="SQL UNION 操作符"></a>SQL UNION 操作符</h3><p>UNION 操作符用于合并两个或多个 SELECT 语句的结果集。</p>
+<p>请注意，UNION 内部的每个 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每个 SELECT 语句中的列的顺序必须相同。</p>
+<h3 id="SQL-UNION-语法"><a href="#SQL-UNION-语法" class="headerlink" title="SQL UNION 语法"></a>SQL UNION 语法</h3><p>SELECT <em>column_name(s)</em> FROM <em>table1</em><br>UNION<br>SELECT <em>column_name(s)</em> FROM <em>table2</em>;</p>
+<p><strong>注释：</strong>默认地，UNION 操作符选取不同的值。如果允许重复的值，请使用 UNION ALL。</p>
+<h3 id="SQL-UNION-ALL-语法"><a href="#SQL-UNION-ALL-语法" class="headerlink" title="SQL UNION ALL 语法"></a>SQL UNION ALL 语法</h3><p>SELECT <em>column_name(s)</em> FROM <em>table1</em><br>UNION ALL<br>SELECT <em>column_name(s)</em> FROM <em>table2</em>;</p>
+<p><strong>注释：</strong>UNION 结果集中的列名总是等于 UNION 中第一个 SELECT 语句中的列名。</p>
 
       </div>
       <div class="post-tags-categories">
