@@ -705,7 +705,7 @@
 
 <h2 id="删除"><a href="#删除" class="headerlink" title=".删除"></a>.删除</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#　del</span><br><span class="line">names = [&#x27;nihao&#x27;, &#x27;haona&#x27;]</span><br><span class="line">del names[1]</span><br><span class="line">删除列表指定位置上的元素,后面的元素自动向前</span><br><span class="line"></span><br><span class="line"># pop</span><br><span class="line">names = [&#x27;nihao&#x27;, &#x27;haona&#x27;]</span><br><span class="line">st = names.pop(1)</span><br><span class="line"># 没有给定下标值的话，默认最后一个，有返回值。</span><br><span class="line"></span><br><span class="line"># remove</span><br><span class="line">names = [&#x27;nihao&#x27;, &#x27;haona&#x27;]</span><br><span class="line"># remove 根据元素的值进行(首次出现)删除,不存在列表中抛出异常,</span><br><span class="line">当删除或增加列表元素时,会自动扩展内存并对元素进行移动,以保证元素之间没有空隙,每当删除或追加一个元素之后,该元素后面的所有元素的索引就会改变</span><br><span class="line"></span><br><span class="line"># clear清理列表</span><br><span class="line">li = [1, 2, 3]</span><br><span class="line">li.clear()</span><br><span class="line">print(li)</span><br></pre></td></tr></table></figure>
 
-<h2 id="切片"><a href="#切片" class="headerlink" title=".切片"></a>.切片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">names = [&#x27;nihao&#x27;, &#x27;haona&#x27;]</span><br><span class="line">names[0:1:1]</span><br><span class="line"></span><br><span class="line">names[开始:结束:步长]</span><br><span class="line">开始默认为0</span><br><span class="line">结束默认列表长度</span><br><span class="line">步长默认为0</span><br><span class="line"></span><br><span class="line">切片操作不会因为下标越界而抛出异常,而是简单的在列表尾部截断或者返回一个空列表</span><br><span class="line"></span><br><span class="line">&gt;&gt;alist = [3,4,5]</span><br><span class="line">&gt;&gt;alist[:3]=[1,2,3]</span><br><span class="line">&gt;&gt;alist</span><br><span class="line">&gt;&gt;[1,2,3]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">切片是浅拷贝:是指生成一个新的列表,并且把原列表的所有元素值得引用都复制到新列表中</span><br><span class="line">数值相等,因为引用的地方一样,但A=B,A不是B</span><br><span class="line">&gt;&gt;A==B</span><br><span class="line">&gt;&gt;TURE</span><br><span class="line">&gt;&gt;A IS B</span><br><span class="line">&gt;&gt;FALSE</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="切片"><a href="#切片" class="headerlink" title=".切片"></a>.切片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">names = [&#x27;nihao&#x27;, &#x27;haona&#x27;]</span><br><span class="line">names[0:1:1]</span><br><span class="line"></span><br><span class="line">names[开始:结束:步长]</span><br><span class="line">开始默认为0</span><br><span class="line">结束默认列表长度</span><br><span class="line">步长默认为1</span><br><span class="line"></span><br><span class="line">切片操作不会因为下标越界而抛出异常,而是简单的在列表尾部截断或者返回一个空列表</span><br><span class="line"></span><br><span class="line">&gt;&gt;alist = [3,4,5]</span><br><span class="line">&gt;&gt;alist[:3]=[1,2,3]</span><br><span class="line">&gt;&gt;alist</span><br><span class="line">&gt;&gt;[1,2,3]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">切片是浅拷贝:是指生成一个新的列表,并且把原列表的所有元素值得引用都复制到新列表中</span><br><span class="line">数值相等,因为引用的地方一样,但A=B,A不是B</span><br><span class="line">&gt;&gt;A==B</span><br><span class="line">&gt;&gt;TURE</span><br><span class="line">&gt;&gt;A IS B</span><br><span class="line">&gt;&gt;FALSE</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="len-计算列表长度"><a href="#len-计算列表长度" class="headerlink" title=".len[计算列表长度]"></a>.len[计算列表长度]</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算长度</span><br></pre></td></tr></table></figure>
 
@@ -835,89 +835,6 @@ python的断行.一行有多个语句用’;’分开
     
 
     <!-- 打赏 -->
-    
-      <div id="appDonate" class="post-donate">
-  <div id="donate_board" class="donate_bar center" ref="donate">
-    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
-  </div>
-  <transition name="fade">
-    <div 
-      class="donate-box-mask"
-      v-cloak 
-      v-show="visible"
-      @click="cancelDialogDrawer()"
-    >
-    </div>
-  </transition>
-  <transition name="bounce">
-    <div class="donate-box" v-cloak v-show="visible">
-      <div class="donate-box_close">
-        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
-      </div>
-      <div class="donate-box_title">
-        <h4>
-          你的赏识是我前进的动力
-        </h4>
-      </div>
-      <div class="donate-box_tab">
-        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
-          支付宝
-        </div>
-        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
-          微信
-        </div>
-      </div>
-      <div class="donate-box_img">
-        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
-          <img src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="支付宝打赏" />
-        </div> 
-        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
-          <img src="/medias/2.jpg" class="lazyload placeholder" data-srcset="/medias/2.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="微信打赏" />
-        </div>
-      </div>
-    </div>
-  </transition>
-</div>
-
-<script>
-  var body = document.body || document.documentElement || window;
-  var vm = new Vue({
-    el: '#appDonate',
-    data: {
-      visible: false,
-      tabActive: 'Alipay',
-      top: 0,
-    },
-    computed: {
-    },
-    mounted() {
-    },
-    methods: {
-      showDialogDrawer() {
-        this.visible = true;
-        // 防止页面滚动，只能让弹框滚动
-        // function getScroll() {
-        //   return {
-        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
-        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-        //   };
-        // }
-        this.top = $(document).scrollTop() // or getScroll().top
-        // console.log('aa', $('.main-content'));
-        body.style.cssText = 'overflow: hidden;';
-      },
-      cancelDialogDrawer() {
-        this.visible = false;
-        body.removeAttribute('style');
-        $(document).scrollTop(this.top)
-      },
-      changeTabActive(name) {
-        this.tabActive = name;
-      }
-    },
-    created() {}
-  })
-</script>
     
 
     <!-- 分享 -->
