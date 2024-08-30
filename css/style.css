@@ -188,6 +188,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   margin-bottom: 20px;
   display: flex;
   box-sizing: border-box;
+  padding-top: 60px;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
