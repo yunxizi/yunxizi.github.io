@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>C语言100练习题 | 云昔子</title>
+  <title>云昔子</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -396,21 +396,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic2.zhimg.com/80/v2-63bbdb5b76b8d349ad35ff4281efbd37_1440w.webp')">
+  background-position: center center;position: relative;background-image:url('https://pic1.zhimg.com/80/v2-03a22891ccba9bccf6424dfd7cbf4be7_1440w.webp')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        C语言100练习题
+        
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2023-01-17 |
+          <i class="fas fa-calendar"></i> 发表于：2024-09-03 |
         </span>
       
 
@@ -434,58 +434,9 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="C语言–100练习题–"><a href="#C语言–100练习题–" class="headerlink" title="C语言–100练习题–"></a>C语言–100练习题–</h1><h2 id="练习题1"><a href="#练习题1" class="headerlink" title="练习题1:"></a>练习题1:</h2><p>题目:</p>
-<p>有1、2、3、4个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？</p>
-<p>程序分析:</p>
-<p>可填在百位、十位、个位的数字都是1、2、3、4。 组成所有的排列后再去掉不满足条件的排列。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="comment">//直接循环,加判断</span></span><br><span class="line">	<span class="comment">//for (int i = 1; i &lt;= 4; i++) &#123;</span></span><br><span class="line">	<span class="comment">//	for (int j = 1; j &lt;= 4; j++) &#123;</span></span><br><span class="line">	<span class="comment">//		for (int k = 1; k &lt;= 4; k++) &#123;</span></span><br><span class="line">	<span class="comment">//			if (i != k &amp;&amp; i != j &amp;&amp; j != k) &#123;</span></span><br><span class="line">	<span class="comment">//				printf(&quot;%d,%d,%d\n&quot;, i, j, k);</span></span><br><span class="line">	<span class="comment">//			&#125;</span></span><br><span class="line">	<span class="comment">//		&#125;</span></span><br><span class="line">	<span class="comment">//	&#125;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt; <span class="number">5</span>; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (i != j) &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">1</span>; k &lt; <span class="number">5</span>; k++) &#123;	</span><br><span class="line">					<span class="keyword">if</span> (j != k&amp;&amp;i!=k) &#123;</span><br><span class="line">						<span class="built_in">printf</span>(<span class="string">&quot;%d%d%d\n&quot;</span>,i,j,k);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习题2"><a href="#练习题2" class="headerlink" title="练习题2"></a>练习题2</h2><p>题目:</p>
-<p>企业发放的奖金根据利润提成。</p>
-<ul>
-<li>利润(I)低于或等于10万元时，奖金可提10%；</li>
-<li>利润高于10万元，低于20万元时，低于10万元的部分按10%提成，高于10万元的部分，可提成7.5%；</li>
-<li>20万到40万之间时，高于20万元的部分，可提成5%；</li>
-<li>40万到60万之间时高于40万元的部分，可提成3%；</li>
-<li>60万到100万之间时，高于60万元的部分，可提成1.5%；</li>
-<li>高于100万元时，超过100万元的部分按1%提成。</li>
-</ul>
-<p>从键盘输入当月利润I，求应发放奖金总数？</p>
-<p>程序分析:</p>
-<p>请利用数轴来分界，定位。注意定义时需把奖金定义成长整型。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> i;</span><br><span class="line">    <span class="type">double</span> bonus1, bonus2, bonus4, bonus6, bonus10, bonus;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;你的净利润是：\n&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>, &amp;i);</span><br><span class="line">    bonus1 = <span class="number">100000</span> * <span class="number">0.1</span>;</span><br><span class="line">    bonus2 = bonus1 + <span class="number">100000</span> * <span class="number">0.075</span>;</span><br><span class="line">    bonus4 = bonus2 + <span class="number">200000</span> * <span class="number">0.05</span>;</span><br><span class="line">    bonus6 = bonus4 + <span class="number">200000</span> * <span class="number">0.03</span>;</span><br><span class="line">    bonus10 = bonus6 + <span class="number">400000</span> * <span class="number">0.015</span>;</span><br><span class="line">    <span class="keyword">if</span> (i &lt;= <span class="number">100000</span>) &#123;</span><br><span class="line">        bonus = i * <span class="number">0.1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (i &lt;= <span class="number">200000</span>) &#123;</span><br><span class="line">        bonus = bonus1 + (i - <span class="number">100000</span>) * <span class="number">0.075</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (i &lt;= <span class="number">400000</span>) &#123;</span><br><span class="line">        bonus = bonus2 + (i - <span class="number">200000</span>) * <span class="number">0.05</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (i &lt;= <span class="number">600000</span>) &#123;</span><br><span class="line">        bonus = bonus4 + (i - <span class="number">400000</span>) * <span class="number">0.03</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (i &lt;= <span class="number">1000000</span>) &#123;</span><br><span class="line">        bonus = bonus6 + (i - <span class="number">600000</span>) * <span class="number">0.015</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (i &gt; <span class="number">1000000</span>) &#123;</span><br><span class="line">        bonus = bonus10 + (i - <span class="number">1000000</span>) * <span class="number">0.01</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;提成为：bonus=%lf&quot;</span>, bonus);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习题3"><a href="#练习题3" class="headerlink" title="练习题3"></a>练习题3</h2><p>题目:</p>
-<p>一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少？</p>
-<p>程序分析:</p>
-<p>假设该数为 x。</p>
-<p>1、则：x + 100 &#x3D; n2, x + 100 + 168 &#x3D; m2</p>
-<p>2、完全平方—A^2-B^2&#x3D;(A+B)(A-B)—-计算等式：m^2- n^2&#x3D; (m + n)(m - n) &#x3D; 168</p>
-<p>3、设置： m + n &#x3D; i，m - n &#x3D; j，i * j &#x3D;168，i 和 j 至少一个是偶数</p>
-<p>4、可得： m &#x3D; (i + j) &#x2F; 2， n &#x3D; (i - j) &#x2F; 2，i 和 j 要么都是偶数，要么都是奇数。</p>
-<p>5、从 3 和 4 推导可知道，i 与 j 均是大于等于 2 的偶数。</p>
-<p>6、由于 i * j &#x3D; 168， j&gt;&#x3D;2，则 2&lt;&#x3D; i &lt;&#x3D;168&#x2F;2 。</p>
-<p>7、接下来将 i 的所有数字循环计算即可。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">2</span>;</span><br><span class="line">	<span class="type">int</span> m,j,n,x;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i; i &lt;= <span class="number">168</span> / <span class="number">2</span>; i+=<span class="number">2</span>) </span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (<span class="number">168</span> % i != <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			 j = <span class="number">168</span> / i;</span><br><span class="line">			 </span><br><span class="line">			 <span class="keyword">if</span> (i&gt; j &amp;&amp; (i + j) % <span class="number">2</span> == <span class="number">0</span> &amp;&amp; (i - j) % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">				m = (i + j) / <span class="number">2</span>;</span><br><span class="line">				n = (i - j) / <span class="number">2</span>;</span><br><span class="line">				x = n * n - <span class="number">100</span>;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%d + 100 = %d * %d\n&quot;</span>, x, n, n);</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%d + 268 = %d * %d\n&quot;</span>, x, m, m);</span><br><span class="line">			 &#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习题4"><a href="#练习题4" class="headerlink" title="练习题4"></a>练习题4</h2><p>题目:</p>
-<p>输入某年某月某日，判断这一天是这一年的第几天？</p>
-<p>程序分析:</p>
-<p>以3月5日为例，应该先把前两个月的加起来，然后再加上5天即本年的第几天，特殊情况，闰年且输入月份大于3时需考虑多加一天</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> year, month, day,sum,leap;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入年&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;year);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入月&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;month);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入日&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;day);</span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">0</span> || year % <span class="number">400</span> == <span class="number">0</span>&amp;&amp;year%<span class="number">100</span>==<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;该年份为闰年\n&quot;</span>);</span><br><span class="line">		leap = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;该年份为平年\n&quot;</span>);</span><br><span class="line">		leap = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">switch</span> (month) <span class="comment">// 先计算某月以前月份的总天数</span></span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">1</span>:sum = <span class="number">0</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">2</span>:sum = <span class="number">31</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">3</span>:sum = <span class="number">59</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">4</span>:sum = <span class="number">90</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">5</span>:sum = <span class="number">120</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">6</span>:sum = <span class="number">151</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">7</span>:sum = <span class="number">181</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">8</span>:sum = <span class="number">212</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">9</span>:sum = <span class="number">243</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">10</span>:sum = <span class="number">273</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">11</span>:sum = <span class="number">304</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">12</span>:sum = <span class="number">334</span>; <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span>:<span class="built_in">printf</span>(<span class="string">&quot;data error&quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (leap == <span class="number">1</span>) &#123;</span><br><span class="line">		sum++;</span><br><span class="line">	&#125;</span><br><span class="line">	sum = sum + day;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;您输入的日期是这一年的第%d天&quot;</span>,sum);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="练习题5"><a href="#练习题5" class="headerlink" title="练习题5"></a>练习题5</h1><p>题目:</p>
-<p>输入三个整数x,y,z，请把这三个数由小到大输出。</p>
-<p>程序分析:</p>
-<p>我们想办法把最小的数放到x上，先将x与y进行比较，如果x&gt;y则将x与y的值进行交换，然后再用x与z进行比较，如果x&gt;z则将x与z的值进行交换，这样能使x最小。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> k,x,y,z;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入三位整数&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;k);</span><br><span class="line">	x = k%<span class="number">10</span>;</span><br><span class="line">	y = k / <span class="number">10</span> % <span class="number">10</span>;</span><br><span class="line">	z = k / <span class="number">100</span> % <span class="number">10</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;个位:%d 十位:%d 百位:%d\n&quot;</span>,x, y, z);</span><br><span class="line">	<span class="keyword">if</span> (x &lt; y) &#123;</span><br><span class="line">		k = y;</span><br><span class="line">		y = x;</span><br><span class="line">		x = k;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (x &lt; z) &#123;</span><br><span class="line">		k = z;</span><br><span class="line">		z = x;</span><br><span class="line">		x = k;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (y &lt; z) &#123;</span><br><span class="line">		k = z;</span><br><span class="line">		z = y;</span><br><span class="line">		y = k;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;个位:%d 十位:%d 百位:%d&quot;</span>, x, y, z);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习题6"><a href="#练习题6" class="headerlink" title="练习题6"></a>练习题6</h2><p>题目:</p>
-<p>用*号输出字母C的图案。</p>
-<p>程序分析:</p>
-<p>可先用’*’号在纸上写出字母C，再分行输出。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;   ***\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; *\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; * \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;   ***\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <p>请求转发和重定向</p>
+<p><img src="/../images/%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86/image-20240903164606880.png" class="lazyload placeholder" data-srcset="/../images/%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86/image-20240903164606880.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20240903164606880"></p>
+<p><img src="/../images/%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86/image-20240903164620233.png" class="lazyload placeholder" data-srcset="/../images/%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86/image-20240903164620233.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20240903164620233"></p>
 
       </div>
       <div class="post-tags-categories">
@@ -499,7 +450,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/post/42ff.html" target="_blank" title="C语言100练习题">http://example.com/post/42ff.html</a>
+    <a href="/post/0.html" target="_blank" title="">http://example.com/post/0.html</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -517,48 +468,21 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-    </div>
-    <a href="/post/74fe.html" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">爬虫总结</div>
-      </div>
-      
-      <!-- <div class="content">
-        爬虫学习1. 爬虫是什么2. 爬虫分类
-通用爬虫
-
- 抓取系统重要组成部分, 抓取的是一个页面的所有数据
-
-聚集爬虫
-
-
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/post/2eae.html" class="post-nav-link">
+    <a href="/post/5920.html" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">数据结构与算法笔记</div>
+        <div class="title-text">flask</div>
       </div>
       <!-- <div class="content">
-        数据结构与算法一.绪论数据结构的定义
-数据:是描述客观事物的数和字符的集合[数据是所有能够被输入到计算机中]
-数据元素:
+        创建flask1234567891011121314151617from flask import Flask# 使用f
       </div> -->
     </a>
   </div>
@@ -780,7 +704,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80%E2%80%93100%E7%BB%83%E4%B9%A0%E9%A2%98%E2%80%93"><span class="toc-text">C语言–100练习题–</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%981"><span class="toc-text">练习题1:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%982"><span class="toc-text">练习题2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%983"><span class="toc-text">练习题3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%984"><span class="toc-text">练习题4</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%985"><span class="toc-text">练习题5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%986"><span class="toc-text">练习题6</span></a></li></ol></li></ol> -->
+        <!--  -->
         <div class="toc"></div>
       </div>
     </div>
