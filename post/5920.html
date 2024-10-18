@@ -534,6 +534,7 @@
 
 <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@app.route(&quot;/user/updata&quot;)</span><br><span class="line">def user_updata():</span><br><span class="line">    users = User_demo.query.filter_by(username=&#x27;张三&#x27;).first()</span><br><span class="line">    users.id = 133</span><br><span class="line">    db.session.commit()</span><br><span class="line">    return &quot;唱歌&quot;</span><br></pre></td></tr></table></figure>
 
+<p><img src="/images/flask/image-20241018135920172.png" class="lazyload placeholder" data-srcset="/images/flask/image-20241018135920172.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20241018135920172"></p>
 
       </div>
       <div class="post-tags-categories">
